@@ -1,0 +1,153 @@
+body{
+    background-color: white;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+}
+
+.submission-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Copre l'intera altezza dello schermo */
+    background-image: url('../immagini/_J1A0625.jpg'); /* Inserisci il tuo percorso immagine */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end; /* Allinea il contenuto in basso */
+}
+.submission-container_contact {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Copre l'intera altezza dello schermo */
+    background-image: url('../immagini/_J1A8170.jpg'); /* Inserisci il tuo percorso immagine */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end; /* Allinea il contenuto in basso */
+}
+.content-overlay {
+    font-family: 'avenir', sans-serif;
+    color: #000;
+    padding: 60px; /* Margine dal bordo */
+    max-width: 600px; /* Limita la larghezza del blocco testo come nello screen */
+    line-height: 1.4;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+    z-index: 10; /* Assicura che il testo sia sopra l'immagine */
+}
+
+.content-overlay p {
+    margin-bottom: 25px;
+}
+
+.email-line {
+    margin-top: 30px;
+}
+
+.email-line strong {
+    font-weight: 900;
+}
+
+.list-section {
+    margin-top: 20px;
+}
+
+.list-section p {
+    margin-bottom: 5px;
+}
+
+.list-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-section li {
+    margin-bottom: 3px;
+}
+
+/* Ottimizzazione per mobile */
+@media (max-width: 768px) {
+    .content-overlay {
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.7); /* Rende il testo leggibile se copre la modella */
+        max-width: 90%;
+    }
+
+
+}
+
+
+.overlay-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.44); /* bianco semitrasparente */
+    z-index: 5;
+}
+.submission-container_ > *:not(.overlay-panel) {
+    position: relative;
+    z-index: 2;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    align-items: start;
+    margin-left: 60px;
+}
+
+.content {
+    flex: 1;
+    z-index: 2;
+    margin-top: 20px;
+
+}
+
+.intro {
+    margin-top: 20px;
+    color: white;
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    font-family: 'avenir', sans-serif;
+}
+
+.contact-group {
+    margin-bottom: 25px;
+}
+
+.contact-group h3 {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: 'avenir', sans-serif;
+    text-transform: none; /* Mantieni minuscole/maiuscole come da immagine */
+      margin-bottom: -0.1px;
+}
+
+.contact-group p, .contact-group a {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: white;
+    text-decoration: none;
+    font-family: 'avenir', sans-serif;
+    transition: opacity 0.3s;
+}
+
+.contact-group a:hover {
+    opacity: 0.7;
+}
+
+.contact-group p {
+    margin-top: 0;      /* elimina spazio sopra il paragrafo */
+    margin-bottom: 18px; /* regola lo spazio sotto il paragrafo */
+}

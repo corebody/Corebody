@@ -69,3 +69,32 @@ nav destra {
     margin-left: 25px;
     margin-right: auto;
 }
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.cb-logo {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: none;
+    pointer-events: none;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+.latest-section{
+    background-color: #e1aebc;
+}

@@ -1,81 +1,15 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="icon" href="immagini/SIGLA NERA.png?v=2" sizes="32x32" type="image/png">
+  <meta charset="UTF-8">
+  <title>Corebody - Submission</title>
 
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/home.css">
+
+    <link rel="stylesheet" href="css/submission.css">
 </head>
 <body>
-    <!-- Popup Newsletter -->
-    <div id="newsletterOverlay" class="newsletter-overlay">
-        <div class="newsletter-popup">
-            <span class="newsletter-close" onclick="closeNewsletter()">&times;</span>
-            <h2>BE THE FIRST TO SEE</h2>
-            <p>Resta aggiornato sulle novità di Corebody</p>
-            <form id="newsletterForm" onsubmit="submitNewsletter(event)">
-                <input type="email" id="newsletterEmail" placeholder="Inserisci la tua email" required>
-                <button type="submit">JOIN US</button>
-            </form>
-            <p class="newsletter-success" id="newsletterSuccess">Grazie per esserti iscritto!</p>
-        </div>
-    </div>
-
-    <style>
-        .newsletter-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 10000;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .newsletter-overlay.active {
-            display: flex;
-        }
-        
-        .newsletter-popup {
-            background: #f5f0e8e8;
-            padding: 40px;
-            max-width: 715px;
-            width: 90%;
-            text-align: center;
-            position: relative;
-            animation: popupSlideIn 0.4s ease;
-            border-radius: 34px;
-        }
-        
-        @keyframes popupSlideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        
-        @media (max-width: 480px) {
-            .newsletter-popup {
-                padding: 30px 20px;
-            }
-            
-            .newsletter-popup h2 {
-                font-size: 20px;
-            }
-        }
-
-    </style>
 
     <!-- Overlay per chiudere il menu -->
     <div id="overlay" class="overlay" onclick="closeMenu()"></div>
@@ -101,76 +35,91 @@
         </div>
     </div>
 
-    <main>
-        <immagine_iniziale>
-            <nav>
+  <!-- HEADER -->
+              <nav>
                 <ul>
                     <destra>
-                        <img id="menuIcon" src="immagini/MENU A TENDINA ICON BEIGE.png" alt="menu" style="height: 30px; width: 30px;" onclick="openMenu()">
+                        <img id="menuIcon" src="immagini/menu a tendina icon nera [Convertito]-04.png" alt="menu" style="height: 30px; width: 30px;" onclick="openMenu()">
                     </destra>
+                    <centro>
+                        <a href="index.html"><img src="immagini/LOGO CENTRATO.png" alt="Corebody" class="cb-logo"></a>
+                    </centro>
                     <sinistra>
-                        <a href="https://www.instagram.com" target="_blank"><img src="immagini/IG ICON BEIGE.png" alt="instagram"></a>
-                        <a href="https://www.tiktok.com" target="_blank"><img src="immagini/TIK TOK ICON BEIGE.png" alt="tiktok"></a>
-                        <a href="https://www.pinterest.com" target="_blank"><img src="immagini/PINTEREST ICON BEIGE.png" alt="pinterest"></a>
+                        <a href="https://www.instagram.com" target="_blank"><img src="immagini/ig icon nera-01.png" alt="instagram"></a>
+                        <a href="https://www.tiktok.com" target="_blank"><img src="immagini/tik tok icon nera-02.png" alt="tiktok"></a>
+                        <a href="https://www.pinterest.com" target="_blank"><img src="immagini/pinterest icon nera-03.png" alt="pinterest"></a>
                     </sinistra>
                 </ul>
             </nav>
-            <img src="immagini/FOTO HOME PAGE.jpg" alt="Immagine Iniziale">
-            <img src="immagini/LOGO BEIGE.png" alt="Corebody" class="titolo">
-                <span></span>
-            </div>
-        </immagine_iniziale>
-        <section class="latest-section">
+
+  <!-- MARQUEE ABOUT / CB -->
+     <section class="latest-section">
   <div class="latest-row">
     <div class="latest-track">
       <!-- STRIP 1 -->
       <div class="latest-strip">
-        <h1 class="latest-title">LATEST</h1>
+        <h1 class="latest-title">SUBMISSION</h1>
         <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
-        <h1 class="latest-title">LATEST</h1>
+                <h1 class="latest-title">SUBMISSION</h1>
         <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
-        <h1 class="latest-title">LATEST</h1>
+                <h1 class="latest-title">SUBMISSION</h1>
         <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
-        <h1 class="latest-title">LATEST</h1>
+                <h1 class="latest-title">SUBMISSION</h1>
+        <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">       
+         <h1 class="latest-title">SUBMISSION</h1>
         <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
-        <h1 class="latest-title">LATEST</h1>
+                <h1 class="latest-title">SUBMISSION</h1>
+        <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">       
+         <h1 class="latest-title">SUBMISSION</h1>
         <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
-        <h1 class="latest-title">LATEST</h1>
-        <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
-        <h1 class="latest-title">LATEST</h1>
-        <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
-        <h1 class="latest-title">LATEST</h1>
+                <h1 class="latest-title">SUBMISSION</h1>
         <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
       </div>
 
       <!-- STRIP 2: copia identica, aria-hidden per accessibilità -->
-      <div class="latest-strip" aria-hidden="true">
-        <h1 class="latest-title">LATEST</h1>
-        <img src="immagini/cb logo rosso.png" alt="" class="logo_piccolo_latest">
-        <h1 class="latest-title">LATEST</h1>
-        <img src="immagini/cb logo rosso.png" alt="" class="logo_piccolo_latest">
-        <h1 class="latest-title">LATEST</h1>
-        <img src="immagini/cb logo rosso.png" alt="" class="logo_piccolo_latest">
-        <h1 class="latest-title">LATEST</h1>
-        <img src="immagini/cb logo rosso.png" alt="" class="logo_piccolo_latest">
-        <h1 class="latest-title">LATEST</h1>
-        <img src="immagini/cb logo rosso.png" alt="" class="logo_piccolo_latest">
-        <h1 class="latest-title">LATEST</h1>
+      <div class="latest-strip">
+        <h1 class="latest-title">SUBMISSION</h1>
         <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
-        <h1 class="latest-title">LATEST</h1>
+                <h1 class="latest-title">SUBMISSION</h1>
         <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
-        <h1 class="latest-title">LATEST</h1>
+                <h1 class="latest-title">SUBMISSION</h1>
+        <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
+                <h1 class="latest-title">SUBMISSION</h1>
+        <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">       
+         <h1 class="latest-title">SUBMISSION</h1>
+        <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
+                <h1 class="latest-title">SUBMISSION</h1>
+        <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">       
+         <h1 class="latest-title">SUBMISSION</h1>
+        <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
+                <h1 class="latest-title">SUBMISSION</h1>
         <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
       </div>
     </div>
   </div>
 
+</section>
+<main class="submission-container">
+  <div class="overlay-panel"></div>
 
+        <div class="content-overlay">
+            <p>Se vuoi contribuire alla diffusione dei nostri valori e delle nostre idee, inviaci il tuo lavoro per una possibile pubblicazione.<br>
+            Corebody è uno spazio aperto alla collaborazione creativa, dove accogliamo punti di vista personali e sperimentazioni visive legate ai temi che esploriamo.</p>
             
-            <div class="articles-grid" id="articlesGrid">
-                <!-- Articoli caricati dinamicamente dal JSON -->
+            <p class="email-line">Invia il tuo progetto a: <strong>corebody.submission@gmail.com</strong></p>
+            
+            <div class="list-section">
+                <p>Includi:</p>
+                <ul>
+                    <li>– una breve descrizione del progetto;</li>
+                    <li>– i crediti del team;</li>
+                    <li>– i contenuti visivi.</li>
+                </ul>
             </div>
-        </section>
+        </div>
+        </div>
+    </main>
+   
 
             <section class="chiusa">
             <div class="sezione_finale">
@@ -205,10 +154,9 @@
             </div>
             </div>
         </section>
-    </main>
 
 
-    </main>
+
 <script>
 // Variabile globale per gli articoli
 var articoliData = [];
@@ -312,101 +260,6 @@ function searchArticles() {
         resultsContainer.appendChild(moreLink);
     }
 }
-
-// ===== SCROLL ANIMATIONS =====
-// Intersection Observer per animazioni al scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-            // Aggiungi delay progressivo per le card
-            if (entry.target.classList.contains('article-card')) {
-                setTimeout(() => {
-                    entry.target.classList.add('visible');
-                }, index * 100);
-            } else {
-                entry.target.classList.add('visible');
-            }
-        }
-    });
-}, observerOptions);
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Osserva le card dopo che sono state caricate
-    setTimeout(() => {
-        document.querySelectorAll('.article-card').forEach(card => {
-            observer.observe(card);
-        });
-    }, 500);
-    
-    // Mostra popup newsletter dopo 2 secondi (solo se non già iscritto)
-    if (!localStorage.getItem('newsletterSubscribed')) {
-        setTimeout(() => {
-            document.getElementById('newsletterOverlay').classList.add('active');
-        }, 0);
-    }
-});
-
-// ===== NEWSLETTER POPUP =====
-function closeNewsletter() {
-    document.getElementById('newsletterOverlay').classList.remove('active');
-}
-
-// URL del tuo Google Apps Script - SOSTITUISCI con il tuo URL dopo il deploy
-var GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyDJ-gAtJx77iI1iO7aeW-AGVsubv1rLG3pvuxhnmGOBaS9eFBUrlx1F7blMN7fiRD3sg/exec';
-
-function submitNewsletter(event) {
-    event.preventDefault();
-    var email = document.getElementById('newsletterEmail').value;
-    var submitBtn = document.querySelector('.newsletter-popup button');
-    
-    // Disabilita il bottone durante l'invio
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'INVIO IN CORSO...';
-    
-    // Invia richiesta a Google Apps Script
-    fetch(GOOGLE_SCRIPT_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email: email })
-    })
-    .then(function() {
-        console.log('Richiesta inviata con successo!');
-        
-        // Mostra messaggio di successo
-        document.getElementById('newsletterForm').style.display = 'none';
-        document.getElementById('newsletterSuccess').classList.add('show');
-        
-        // Salva che l'utente si è iscritto
-        localStorage.setItem('newsletterSubscribed', 'true');
-        
-        // Chiudi popup dopo 2 secondi
-        setTimeout(() => {
-            closeNewsletter();
-        }, 2000);
-    })
-    .catch(function(error) {
-        console.error('Errore:', error);
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'ISCRIVITI';
-        alert('Si è verificato un errore. Riprova più tardi.');
-    });
-}
-
-// Chiudi popup cliccando fuori
-document.getElementById('newsletterOverlay').addEventListener('click', function(e) {
-    if (e.target === this) {
-        closeNewsletter();
-    }
-});
-
 
 </script>
 </body>

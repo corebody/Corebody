@@ -203,34 +203,38 @@ ul.cb-paragraph li:nth-child(7) { animation-delay: 1.4s; }
   }
 }
 
-/* il contenitore principale */
-.hero-panel {
-  height: 100vh;
-  background-image: url("../immagini/Screenshot 2026-03-20 alle 16.46.38.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed; /* effetto parallax di base */
-}
-/* immagine sotto */
-.hero-bg {
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 70vh;
-  background: url("../immagini/Screenshot\ 2026-03-20\ alle\ 16.46.38.png") center/cover no-repeat;
-  z-index: 0;
-}
-
-/* SEZIONI SOPRA: SENZA BACKGROUND o semi-trasparente */
+/* 1. Assicurati che le sezioni di testo siano coprenti (Bianche) */
 .cb-text-row {
   position: relative;
-  z-index: 1;
-  background: none !important;  /* o rgba(255,255,255,0.7) */
-  min-height: 100vh;
+  z-index: 2; /* Sta sopra l'immagine */
+  background-color: white !important; 
+  margin: 0;
 }
 
-/* COLONNE: anche queste trasparenti */
-.cb-column {
-  background: none !important;
+/* 2. La sezione che rivela l'immagine */
+.blocco-hero {
+  position: relative;
+  height: 90vh; /* Altezza della "finestra" sull'immagine */
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  /* Inserisci qui l'URL dell'immagine */
+  background-image: url("../immagini/Screenshot\ 2026-03-20\ alle\ 16.46.38.png");
+  background-attachment: fixed; /* L'effetto "DME Magazine" */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;  /*contain*/
+  z-index: 1;
+}
+
+/* 3. Pulizia per evitare spazi bianchi indesiderati */
+.cb-main {
+  background-color: white;
 }

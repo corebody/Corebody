@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'avenir';
     src: url('../font/Avenir_Book/Avenir\ Book.ttf') format('opentype');
@@ -82,7 +83,8 @@ nav ul{
 padding :1;
 }
 .cb-main {
-  padding: 56px 60px 80px;
+  background-color: white;
+
 }
 
 .cb-text-row {
@@ -90,7 +92,9 @@ padding :1;
   grid-template-columns: 0.9fr 2.6fr 2.6fr 1.5fr;
   grid-template-rows: 0.4fr 1fr 0.4fr 2.5fr;
   gap: 0px;
+  padding: 40px 40px 60px;
   align-items: flex-start;
+  background-color: white;
 }
 
 /* Titoli laterali */
@@ -110,6 +114,7 @@ font-family: 'avenir', serif;
   text-align: justify;
     text-align-last: left;
 }
+
 .sidebar {
 background-color: #fefefef7;
 }
@@ -172,6 +177,21 @@ background-color: #fefefef7;
 .cb-section-title:nth-child(6) {
   animation-delay: 1.2s;
 }
+
+
+ul.cb-paragraph li {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+ul.cb-paragraph li:nth-child(1) { animation-delay: 0.2s; }
+ul.cb-paragraph li:nth-child(2) { animation-delay: 0.4s; }
+ul.cb-paragraph li:nth-child(3) { animation-delay: 0.6s; }
+ul.cb-paragraph li:nth-child(4) { animation-delay: 0.8s; }
+ul.cb-paragraph li:nth-child(5) { animation-delay: 1.0s; }
+ul.cb-paragraph li:nth-child(6) { animation-delay: 1.2s; }
+ul.cb-paragraph li:nth-child(7) { animation-delay: 1.4s; }
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -181,4 +201,36 @@ background-color: #fefefef7;
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* il contenitore principale */
+.hero-panel {
+  height: 100vh;
+  background-image: url("../immagini/Screenshot 2026-03-20 alle 16.46.38.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* effetto parallax di base */
+}
+/* immagine sotto */
+.hero-bg {
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 70vh;
+  background: url("../immagini/Screenshot\ 2026-03-20\ alle\ 16.46.38.png") center/cover no-repeat;
+  z-index: 0;
+}
+
+/* SEZIONI SOPRA: SENZA BACKGROUND o semi-trasparente */
+.cb-text-row {
+  position: relative;
+  z-index: 1;
+  background: none !important;  /* o rgba(255,255,255,0.7) */
+  min-height: 100vh;
+}
+
+/* COLONNE: anche queste trasparenti */
+.cb-column {
+  background: none !important;
 }

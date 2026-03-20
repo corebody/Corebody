@@ -1,3 +1,4 @@
+
 /* Affianca le scritte LATEST e CB */
 .latest-title {
     font-size: 58px;
@@ -546,7 +547,7 @@ immagine_iniziale .titolo {
 }
 
 .sezione_finale {
-    height: 100vh;
+    height: 60vh;
     width: 100%;
     background-color: #C5D9E2;
     display: flex;
@@ -562,17 +563,20 @@ immagine_iniziale .titolo {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: -100px;
 }
 
 .scritta_centro .titolo {
-    max-width: 90vw;
+    max-width: 60vw;
     height: auto;
+    margin-bottom: 100px;
+    margin-top:30px;
 }
 
 .scritta_centro .basso {
     display: flex;
-    justify-content: center;
-    gap: 70px;
+    justify-content:space-between;
+    gap: 106px;
     margin-top: -50px;
     position: relative;
     z-index: 10;
@@ -601,8 +605,7 @@ immagine_iniziale .titolo {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    width: 100%;
 }
 
 .sotto img {
@@ -706,3 +709,91 @@ immagine_iniziale .titolo {
         .newsletter-success.show {
             display: block;
         }
+
+
+        nav#sotto {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  background: transparent;
+}
+
+nav#sotto ul {
+  display: contents; /* permette ai figli di essere griglia */
+  margin: 0;
+  padding: 0;
+}
+
+nav#sotto centro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+nav#sotto destra p,
+nav#sotto centro p {
+  margin-left: 35px;
+  margin-bottom:8px;
+  font-size: 18px;
+  color: #222;
+}
+nav#sotto destra p{
+margin-bottom: 3;
+  margin-top: 0;
+}
+
+
+
+
+nav#sotto sinistra img {
+  width: 32px;
+  height: 32px;
+}
+
+
+/* Centra i link del footer perfettamente */
+.basso {
+  display: flex;
+  justify-content: space-around; /* o center se preferisci stretti */
+  gap: 40px; /* spazio uguale tra tutti */
+  width: 100%;
+  max-width: 600px; /* larghezza massima centrata */
+}
+
+.basso a {
+  font-size: 30px; /* o il tuo */
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap; /* impedisce il wrap */
+  flex: 1; /* si espandono uguali */
+  text-align: center;
+}
+
+/* nav sotto: griglia 3 colonne */
+#sotto ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#sotto div:nth-child(1) { text-align: right; } /* destra */
+#sotto div:nth-child(2) { text-align: center; } /* centro */
+#sotto div:nth-child(3) { text-align: left; } /* sinistra */
+
+#sotto img {
+  width: 32px;
+  height: 32px;
+}
+
+.about-line::after {
+  content: "\00A0\00A0\00A0"; /* 7 spazi non-breaking invisibili */
+  /* ogni \00A0 = &nbsp; largo come una lettera */
+}
+

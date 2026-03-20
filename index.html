@@ -14,11 +14,11 @@
     <div id="newsletterOverlay" class="newsletter-overlay">
         <div class="newsletter-popup">
             <span class="newsletter-close" onclick="closeNewsletter()">&times;</span>
-            <h2>ISCRIVITI ALLA NEWSLETTER</h2>
-            <p>Resta aggiornato sulle ultime novità di Corebody</p>
+            <h2>BE THE FIRST TO SEE</h2>
+            <p>Resta aggiornato sulle novità di Corebody</p>
             <form id="newsletterForm" onsubmit="submitNewsletter(event)">
                 <input type="email" id="newsletterEmail" placeholder="Inserisci la tua email" required>
-                <button type="submit">ISCRIVITI</button>
+                <button type="submit">JOIN US</button>
             </form>
             <p class="newsletter-success" id="newsletterSuccess">Grazie per esserti iscritto!</p>
         </div>
@@ -45,7 +45,7 @@
         .newsletter-popup {
             background: #f5f0eb;
             padding: 40px;
-            max-width: 450px;
+            max-width: 715px;
             width: 90%;
             text-align: center;
             position: relative;
@@ -63,83 +63,7 @@
                 transform: translateY(0);
             }
         }
-        
-        .newsletter-close {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 28px;
-            cursor: pointer;
-            color: #333;
-            transition: color 0.3s;
-        }
-        
-        .newsletter-close:hover {
-            color: #000;
-        }
-        
-        .newsletter-popup h2 {
-            font-family: 'Times New Roman', serif;
-            font-size: 24px;
-            margin-bottom: 10px;
-            letter-spacing: 2px;
-            color: #333;
-        }
-        
-        .newsletter-popup p {
-            font-family: 'Arial', sans-serif;
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 25px;
-        }
-        
-        .newsletter-popup form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        
-        .newsletter-popup input[type="email"] {
-            padding: 15px;
-            border: 1px solid #ccc;
-            font-size: 14px;
-            font-family: 'Arial', sans-serif;
-            outline: none;
-            transition: border-color 0.3s;
-            border-radius: 14px;
-        }
-        
-        .newsletter-popup input[type="email"]:focus {
-            border-color: #333;
-        }
-        
-        .newsletter-popup button {
-            padding: 15px;
-            background: #333;
-            color: #f5f0eb;
-            border: none;
-            font-size: 14px;
-            letter-spacing: 2px;
-            cursor: pointer;
-            font-family: 'Arial', sans-serif;
-            transition: background 0.3s;
-                    border-radius: 14px;
-        }
-        
-        .newsletter-popup button:hover {
-            background: #000;
-        }
-        
-        .newsletter-success {
-            display: none;
-            color: #2e7d32 !important;
-            margin-top: 15px;
-            margin-bottom: 0 !important;
-        }
-        
-        .newsletter-success.show {
-            display: block;
-        }
+
         
         @media (max-width: 480px) {
             .newsletter-popup {

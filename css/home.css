@@ -625,3 +625,84 @@ immagine_iniziale .titolo {
         max-width: 100vw;
     }
 }
+
+
+        
+        .newsletter-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            cursor: pointer;
+            color: #333;
+            transition: color 0.3s;
+        }
+        
+        .newsletter-close:hover {
+            color: #000;
+        }
+        
+        .newsletter-popup h2 {
+            font-family: 'secondo_font', sans-serif;
+            font-size: 60px;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            color: #852936;
+        }
+        
+        .newsletter-popup p {
+            font-family: 'avenir', sans-serif;
+            font-size: 20px;
+            color:black;
+            margin-bottom: 25px;
+        }
+        
+        .newsletter-popup form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .newsletter-popup input[type="email"] {
+            padding: 20px;
+            border: 1px solid #ccc;
+            font-size: 24px;
+            font-family: 'avenir', sans-serif;
+            outline: none;
+            transition: border-color 0.3s;
+            border-radius: 14px;
+        }
+        
+        .newsletter-popup input[type="email"]:focus {
+            border-color: #333;
+        }
+        
+        .newsletter-popup button {
+            padding: 17px;
+             background: #e1aebc;
+            color: #852936;
+            border: none;
+            font-size: 34px;
+            letter-spacing: 2.5px;
+            cursor: pointer;
+            font-family: 'avenir', sans-serif;
+            transition: background 0.3s;
+                    border-radius: 14px;
+        }
+        
+        .newsletter-popup button:hover {
+            color: #e1aebc;
+            background-color: #852936;
+        }
+        
+        
+        .newsletter-success {
+            display: none;
+            color: #2e7d32 !important;
+            margin-top: 15px;
+            margin-bottom: 0 !important;
+        }
+        
+        .newsletter-success.show {
+            display: block;
+        }

@@ -24,58 +24,6 @@
         </div>
     </div>
 
-    <style>
-        .newsletter-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 10000;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .newsletter-overlay.active {
-            display: flex;
-        }
-        
-        .newsletter-popup {
-            background: #f5f0e8e8;
-            padding: 40px;
-            max-width: 715px;
-            width: 90%;
-            text-align: center;
-            position: relative;
-            animation: popupSlideIn 0.4s ease;
-            border-radius: 34px;
-        }
-        
-        @keyframes popupSlideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        
-        @media (max-width: 480px) {
-            .newsletter-popup {
-                padding: 30px 20px;
-            }
-            
-            .newsletter-popup h2 {
-                font-size: 20px;
-            }
-        }
-
-    </style>
 
     <!-- Overlay per chiudere il menu -->
     <div id="overlay" class="overlay" onclick="closeMenu()"></div>
@@ -186,11 +134,11 @@
             <nav id="sotto">
                 <ul>
                     <destra>
-                        <p>
+                        <p style="font-weight: bolder;">
                             Be the first to see
                         </p>
                         <p> resta aggiornato sulle novità di Corebody </p>
-                        <p> JOIN US </p>
+                        <a href="#" class="join-us-link" onclick="openNewsletter(); return false;">JOIN US</a>
                     </destra>
                     <centro>
                         <p> Credits fotografici</p>
@@ -210,6 +158,10 @@
 
     </main>
 <script>
+// Funzione per aprire il popup newsletter
+function openNewsletter() {
+    document.getElementById('newsletterOverlay').classList.add('active');
+}
 // Variabile globale per gli articoli
 var articoliData = [];
 
@@ -220,19 +172,22 @@ fetch('articoli.json')
         articoliData = articoli;
         var grid = document.getElementById('articlesGrid');
         
-        articoli.forEach(function(art) {
-            grid.innerHTML += `
-                <article class="article-card" data-id="${art.id}" onclick="window.location='articolo.html?id=${art.id}'" style="cursor: pointer;">
-                    <img src="${art.immagine}" alt="${art.categoria}" class="article-image">
-                    <div class="article-content">
-                        <h3 class="article-category">${art.categoria}</h3>
-                        <p class="article-date">${art.data}</p>
-                        <h2 class="article-title">${art.titolo}</h2>
-                        <p class="article-text">${art.anteprima}</p>
-                    </div>
-                </article>
-            `;
-        });
+       articoli.forEach(function(art) {
+    grid.innerHTML += `
+        <article class="article-card" data-id="${art.id}" onclick="window.location='articolo.html?id=${art.id}'" style="cursor: pointer;">
+            <div class="article-image-container">
+                <img src="${art.immagine}" alt="${art.categoria}" class="article-image">
+            </div>
+            
+            <div class="article-content">
+                <h3 class="article-category">${art.categoria}</h3>
+                <p class="article-date">${art.data}</p>
+                <h2 class="article-title">${art.titolo}</h2>
+                <p class="article-text">${art.anteprima}</p>
+            </div>
+        </article>
+    `;
+});
     })
     .catch(error => console.error('Errore nel caricamento degli articoli:', error));
 

@@ -18,7 +18,20 @@
 }
     </style>
 </head>
-<body>
+    <body>
+    <!-- Popup Newsletter -->
+    <div id="newsletterOverlay" class="newsletter-overlay">
+        <div class="newsletter-popup">
+            <span class="newsletter-close" onclick="closeNewsletter()">&times;</span>
+            <h2>BE THE FIRST TO SEE</h2>
+            <p>Resta aggiornato sulle novità di Corebody</p>
+            <form id="newsletterForm" onsubmit="submitNewsletter(event)">
+                <input type="email" id="newsletterEmail" placeholder="Inserisci la tua email" required>
+                <button type="submit">JOIN US</button>
+            </form>
+            <p class="newsletter-success" id="newsletterSuccess">Grazie per esserti iscritto!</p>
+        </div>
+    </div>
 
     <!-- Overlay per chiudere il menu -->
     <div id="overlay" class="overlay" onclick="closeMenu()"></div>
@@ -40,7 +53,7 @@
         <div class="basso">
         <a href="about.html">ABOUT</a>
         <a href="submission.html">SUBMISSION</a>
-        <a href="#">CONTACT</a>
+        <a href="contact.html">CONTACT</a>
         </div>
     </div>
 
@@ -206,18 +219,18 @@ sensoriali.
             <div class="basso">
                 <a href="about.html" class="about-line">ABOUT</a>
                 <a href="submission.html">SUBMISSION</a>
-                <a href="#">CONTACT</a>
+                <a href="contact.html">CONTACT</a>
                 </div>
             </div>
             <div class="sotto" >
-            <nav id="sotto">
+              <nav id="sotto">
                 <ul>
                     <destra>
-                        <p>
+                        <p style="font-weight: bolder;">
                             Be the first to see
                         </p>
                         <p> resta aggiornato sulle novità di Corebody </p>
-                        <p> JOIN US </p>
+                        <a href="#" class="join-us-link" onclick="openNewsletter(); return false;">JOIN US</a>
                     </destra>
                     <centro>
                         <p> Credits fotografici</p>
@@ -232,10 +245,15 @@ sensoriali.
             </div>
             </div>
         </section>
+    </main>
 
 
-
+    </main>
 <script>
+// Funzione per aprire il popup newsletter
+function openNewsletter() {
+    document.getElementById('newsletterOverlay').classList.add('active');
+}
 // Variabile globale per gli articoli
 var articoliData = [];
 
@@ -338,6 +356,60 @@ function searchArticles() {
         resultsContainer.appendChild(moreLink);
     }
 }
+function closeNewsletter() {
+    document.getElementById('newsletterOverlay').classList.remove('active');
+}
+
+// URL del tuo Google Apps Script - SOSTITUISCI con il tuo URL dopo il deploy
+var GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyDJ-gAtJx77iI1iO7aeW-AGVsubv1rLG3pvuxhnmGOBaS9eFBUrlx1F7blMN7fiRD3sg/exec';
+
+function submitNewsletter(event) {
+    event.preventDefault();
+    var email = document.getElementById('newsletterEmail').value;
+    var submitBtn = document.querySelector('.newsletter-popup button');
+    
+    // Disabilita il bottone durante l'invio
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'INVIO IN CORSO...';
+    
+    // Invia richiesta a Google Apps Script
+    fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: email })
+    })
+    .then(function() {
+        console.log('Richiesta inviata con successo!');
+        
+        // Mostra messaggio di successo
+        document.getElementById('newsletterForm').style.display = 'none';
+        document.getElementById('newsletterSuccess').classList.add('show');
+        
+        // Salva che l'utente si è iscritto
+        localStorage.setItem('newsletterSubscribed', 'true');
+        
+        // Chiudi popup dopo 2 secondi
+        setTimeout(() => {
+            closeNewsletter();
+        }, 2000);
+    })
+    .catch(function(error) {
+        console.error('Errore:', error);
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'ISCRIVITI';
+        alert('Si è verificato un errore. Riprova più tardi.');
+    });
+}
+
+// Chiudi popup cliccando fuori
+document.getElementById('newsletterOverlay').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeNewsletter();
+    }
+});
 
 </script>
 </body>

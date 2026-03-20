@@ -1,8 +1,52 @@
+
+/* Affianca le scritte LATEST e CB */
+.latest-row {
+    display: flex;
+    overflow: hidden;
+    width: 100vw;
+    align-items: center;
+    background: transparent;
+    position: relative;
+}
+
+.latest-marquee {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-width: max-content;
+    animation: marqueeScroll 16s linear infinite;
+}
+
+
+@keyframes marqueeScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+@keyframes scrollRow {
+    0% {
+        transform: translateX(-100vw);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+
 @font-face {
     font-family: 'secondo_font';
     src: url('../font/BasheqVintageDemoVersionRegular-gwpmE.otf') format('opentype');
 }
 
+@font-face {
+    font-family: 'font_principale';
+    src: url('../font/belion-radego-font/BelionRadego-zrO73.otf') format('opentype');
+}
 /* Animazioni */
 @keyframes fadeInUp {
     0% {
@@ -227,9 +271,9 @@ immagine_iniziale .titolo {
 }
 
 .sidebar a {
-    padding: 20px 30px;
+    padding: 20px 50px;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 50px;
     color: #000;
     display: block;
     transition: 0.3s;
@@ -259,16 +303,16 @@ immagine_iniziale .titolo {
 
 .basso {
     margin-top: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 40px;
 }
 
 .basso a {
     padding: 10px 0;
-    font-size: 20px;
+    font-size: 40px;
     white-space: nowrap;
 }
 
@@ -282,8 +326,8 @@ immagine_iniziale .titolo {
 }
 
 .search-icon {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -364,15 +408,12 @@ immagine_iniziale .titolo {
     font-weight: normal;
     letter-spacing: 2px;
     font-family: 'secondo_font', sans-serif;
-    opacity: 0;
-    transform: translateX(-30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+opacity: 1;
+transform: none;
+transition: none;
 }
 
-.latest-title.visible {
-    opacity: 1;
-    transform: translateX(0);
-}
+
 
 /* Grid layout per le card */
 .articles-grid {
@@ -462,7 +503,7 @@ immagine_iniziale .titolo {
 }
 
 /* Responsive: 1 colonna su mobile */
-@media (max-width: 768px) {
+@media (max-width: 1768px) {
     .articles-grid {
         grid-template-columns: 1fr;
     }
@@ -477,12 +518,12 @@ immagine_iniziale .titolo {
     }
     
     .sidebar a {
-        font-size: 18px;
+        font-size:  40px;
         padding: 15px 20px;
     }
     
     .basso a {
-        font-size: 14px !important;
+        font-size: 40px !important;
     }
     
     /* Hero section mobile - LOGO PIÙ PICCOLO */
@@ -660,4 +701,44 @@ immagine_iniziale .titolo {
 .sotto img:hover {
     transform: scale(1.2);
     opacity: 0.7;
+}
+
+.logo_piccolo_latest {
+    color: #852936;
+    margin-right: 53px;
+    margin-left: 53px;
+    opacity: 1;
+    width: 38px;
+    height: 38px;
+    transform: none;
+    animation: none;
+}
+
+
+
+        .latest-row {
+  width: 100vw;
+  overflow: hidden;
+  background: transparent;
+}
+
+.latest-track {
+  display: flex;
+  width: max-content;           /* largo quanto il contenuto */
+  animation: latestMarquee 16s linear infinite;
+}
+
+.latest-strip {
+  display: flex;
+  align-items: center;
+}
+
+@keyframes latestMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* una strip intera esce a sinistra, l'altra la sostituisce */
+    transform: translateX(-50%);
+  }
 }

@@ -3,6 +3,10 @@
     src: url('../font/BasheqVintageDemoVersionRegular-gwpmE.otf') format('opentype');
 }
 
+@font-face {
+    font-family: 'font_principale';
+    src: url('../font/belion-radego-font/BelionRadego-zrO73.otf') format('opentype');
+}
 /* Smooth scroll globale */
 html {
     scroll-behavior: smooth;

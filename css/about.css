@@ -1,0 +1,123 @@
+
+body {
+  margin: 0;
+  background-color: white ;
+}
+/* HEADER ----------------------------------------------------- */
+/* Logo centrale: sostituisci con il tuo font */
+/* Centra e allarga il logo nel nav */
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.cb-logo {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: none;
+    pointer-events: none;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+.latest-section{
+    background-color: #e1aebc;
+}
+
+/* MARQUEE ---------------------------------------------------- */
+
+.cb-marquee-section {
+  background: #c98d96; /* rosa simile */
+}
+
+.cb-marquee-row {
+  width: 100vw;
+  overflow: hidden;
+}
+
+.cb-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: cbMarquee 18s linear infinite;
+}
+
+.cb-marquee-strip {
+  display: flex;
+  align-items: center;
+}
+
+.cb-marquee-strip span {
+  font-size: 36px;
+  letter-spacing: 0.12em;
+  margin: 12px 32px;
+}
+
+/* Animazione infinita senza scatti */
+@keyframes cbMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* LAYOUT CONTENUTO ------------------------------------------- */
+
+.cb-main {
+  padding: 56px 60px 80px;
+}
+
+.cb-text-row {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+/* Titoli laterali */
+.cb-section-title {
+  font-size: 32px;
+  letter-spacing: 0.08em;
+  margin: 0 0 24px;
+}
+
+/* Testo */
+.cb-paragraph {
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 420px;
+}
+.sidebar {
+background-color: #fefefef7;
+}
+/* Responsivo minimo */
+@media (max-width: 900px) {
+  .cb-main {
+    padding: 40px 24px 60px;
+  }
+
+  .cb-text-row {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .cb-section-title {
+    text-align: left;
+  }
+
+  .cb-paragraph {
+    max-width: none;
+  }
+}

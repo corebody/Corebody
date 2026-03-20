@@ -147,6 +147,33 @@
                 font-size: 20px;
             }
         }
+
+        .latest-row {
+  width: 100vw;
+  overflow: hidden;
+  background: transparent;
+}
+
+.latest-track {
+  display: flex;
+  width: max-content;           /* largo quanto il contenuto */
+  animation: latestMarquee 16s linear infinite;
+}
+
+.latest-strip {
+  display: flex;
+  align-items: center;
+}
+
+@keyframes latestMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* una strip intera esce a sinistra, l'altra la sostituisce */
+    transform: translateX(-50%);
+  }
+}
     </style>
 
     <!-- Overlay per chiudere il menu -->
@@ -167,7 +194,7 @@
         <a href="categoria.html?cat=art">ART</a>
         <a href="#">SHOP</a>
         <div class="basso">
-        <a href="#">ABOUT</a>
+        <a href="about.html">ABOUT</a>
         <a href="#">SUBMISSION</a>
         <a href="#">CONTACT</a>
         </div>
@@ -193,7 +220,51 @@
             </div>
         </immagine_iniziale>
         <section class="latest-section">
-            <h1 class="latest-title">LATEST</h1>
+  <div class="latest-row">
+    <div class="latest-track">
+      <!-- STRIP 1 -->
+      <div class="latest-strip">
+        <h1 class="latest-title">LATEST</h1>
+        <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
+        <h1 class="latest-title">LATEST</h1>
+        <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
+        <h1 class="latest-title">LATEST</h1>
+        <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
+        <h1 class="latest-title">LATEST</h1>
+        <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
+        <h1 class="latest-title">LATEST</h1>
+        <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
+        <h1 class="latest-title">LATEST</h1>
+        <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
+        <h1 class="latest-title">LATEST</h1>
+        <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
+        <h1 class="latest-title">LATEST</h1>
+        <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
+      </div>
+
+      <!-- STRIP 2: copia identica, aria-hidden per accessibilità -->
+      <div class="latest-strip" aria-hidden="true">
+        <h1 class="latest-title">LATEST</h1>
+        <img src="immagini/cb logo rosso.png" alt="" class="logo_piccolo_latest">
+        <h1 class="latest-title">LATEST</h1>
+        <img src="immagini/cb logo rosso.png" alt="" class="logo_piccolo_latest">
+        <h1 class="latest-title">LATEST</h1>
+        <img src="immagini/cb logo rosso.png" alt="" class="logo_piccolo_latest">
+        <h1 class="latest-title">LATEST</h1>
+        <img src="immagini/cb logo rosso.png" alt="" class="logo_piccolo_latest">
+        <h1 class="latest-title">LATEST</h1>
+        <img src="immagini/cb logo rosso.png" alt="" class="logo_piccolo_latest">
+        <h1 class="latest-title">LATEST</h1>
+        <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
+        <h1 class="latest-title">LATEST</h1>
+        <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
+        <h1 class="latest-title">LATEST</h1>
+        <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
+      </div>
+    </div>
+  </div>
+
+
             
             <div class="articles-grid" id="articlesGrid">
                 <!-- Articoli caricati dinamicamente dal JSON -->
@@ -204,7 +275,7 @@
             <div class="scritta_centro">
                             <img src="immagini/LOGO NERO.png" alt="Corebody" class="titolo">
             <div class="basso">
-                <a href="#">ABOUT</a>
+                <a href="about.html">ABOUT</a>
                 <a href="#">SUBMISSION</a>
                 <a href="#">CONTACT</a>
                 </div>
@@ -346,12 +417,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Osserva elementi quando il DOM è pronto
 document.addEventListener('DOMContentLoaded', function() {
-    // Osserva il titolo LATEST
-    const latestTitle = document.querySelector('.latest-title');
-    if (latestTitle) observer.observe(latestTitle);
-    
     // Osserva le card dopo che sono state caricate
     setTimeout(() => {
         document.querySelectorAll('.article-card').forEach(card => {

@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    background-color: #e1aebc;
+    background-color: #faf7ea;
     font-family: 'Cowboya', sans-serif;
     margin: 0;
     padding: 0;
@@ -66,7 +66,7 @@ footer{
 }
 
 nav destra {
-    margin-left: 25px;
+    margin-left: 0px;
     margin-right: auto;
 }
 
@@ -76,11 +76,13 @@ nav ul {
     align-items: center;
 }
 
-centro {
+
+.centro {
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1;
+    margin-top: 1rem;
 }
 
 .cb-logo {
@@ -92,7 +94,7 @@ centro {
     transition: none;
     pointer-events: none;
     margin-bottom: 25px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .latest-section{

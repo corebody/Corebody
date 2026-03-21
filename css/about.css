@@ -17,24 +17,6 @@ nav ul {
     align-items: center;
 }
 
-centro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-}
-
-.cb-logo {
-    max-width: 320px;
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    transition: none;
-    pointer-events: none;
-    margin-bottom: 25px;
-    margin-top: 10px;
-}
 
 .latest-section{
     background-color: #e1aebc;
@@ -89,14 +71,22 @@ padding :1;
 
 .cb-text-row {
   display: grid;
-  grid-template-columns: 0.9fr 2.6fr 2.6fr 1.5fr;
+  grid-template-columns: 1fr 3.15fr 3.15fr 1.5fr;
   grid-template-rows: 0.4fr 1fr 0.4fr 2.5fr;
   gap: 0px;
-  padding: 40px 40px 60px;
+  padding: 40px 60px 60px;
   align-items: flex-start;
   background-color: white;
 }
-
+.cb-text-row_2 {
+  display: grid;
+  grid-template-columns: 1.3fr 3.6fr 3.6fr 0.8fr;
+  grid-template-rows: 0.4fr 1fr 0.4fr 2fr;
+  gap: 0px;
+  padding: 0px 60px 0px;
+  align-items: flex-start;
+  background-color: white;
+}
 /* Titoli laterali */
 .cb-section-title {
 font-family: 'avenir', serif;
@@ -120,9 +110,6 @@ background-color: #fefefef7;
 }
 /* Responsivo minimo */
 @media (max-width: 900px) {
-  .cb-main {
-    padding: 40px 24px 60px;
-  }
 
   .cb-text-row {
     grid-template-columns: 1fr;
@@ -214,7 +201,7 @@ ul.cb-paragraph li:nth-child(7) { animation-delay: 1.4s; }
 /* 2. La sezione che rivela l'immagine */
 .blocco-hero {
   position: relative;
-  height: 90vh; /* Altezza della "finestra" sull'immagine */
+  height: 65vh; /* Altezza della "finestra" sull'immagine */
   width: 100%;
   overflow: hidden;
 }
@@ -237,4 +224,7 @@ ul.cb-paragraph li:nth-child(7) { animation-delay: 1.4s; }
 /* 3. Pulizia per evitare spazi bianchi indesiderati */
 .cb-main {
   background-color: white;
+}
+ul{
+  margin-block-end: 0;
 }

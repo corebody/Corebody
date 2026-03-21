@@ -1,0 +1,72 @@
+/* Ottimizzazione per Mobile (Smartphone) */
+@media (max-width: 768px) {
+    nav ul {
+        padding: 0 15px;
+        gap: 10px; /* Riduce lo spazio tra le icone social */
+    }
+
+    .cb-logo {
+        max-width: 200px; /* Riduce il logo su schermi piccoli */
+        margin-bottom: 15px;
+    }
+
+    /* Regola per la sidebar su mobile */
+    .sidebar a {
+        font-size: 30px; /* Rende i link del menu leggibili ma non giganti */
+        padding: 15px 15px;
+    }
+    .basso{
+        max-width: 449px;
+    }
+}
+
+/* Da aggiungere in fondo a about.css */
+@media (max-width: 992px) {
+    .cb-text-row, .cb-text-row_2 {
+        display: block; /* Trasforma la griglia in una colonna singola */
+        padding: 20px;
+    }
+
+    .cb-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .cb-section-title {
+        font-size: 28px; /* Ridimensiona i titoli */
+    }
+
+    .blocco-hero {
+        height: 40vh; /* Riduce l'altezza dell'immagine hero su mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    immagine_iniziale .titolo {
+        max-width: 90vw; /* Il logo occupa più spazio in larghezza su mobile */
+    }
+
+    .latest-title {
+        font-size: 32px; /* Riduce la dimensione del testo che scorre */
+    }
+
+    .logo_piccolo_latest {
+        width: 25px;
+        height: 25px;
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .content-overlay {
+        padding: 20px;
+        font-size: 16px;
+        background: rgba(255, 255, 255, 0.85); /* Aumenta l'opacità per la leggibilità */
+    }
+
+    .submission-container, .submission-container_contact {
+        height: auto;
+        min-height: 100vh;
+        align-items: center; /* Centra il form/testo verticalmente */
+    }
+}

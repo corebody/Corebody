@@ -254,30 +254,28 @@ function searchArticles() {
 }
 
 // --- 3. NEWSLETTER E INIZIALIZZAZIONE ---
+document.addEventListener("DOMContentLoaded", function() {
+    // 1. Controlliamo se nella sessione attuale il popup è già stato mostrato
+    const isPopupShown = sessionStorage.getItem('newsletterShown');
+
+    // 2. Se non è mai stato mostrato in questa sessione, lo attiviamo
+    if (!isPopupShown) {
+        openNewsletter();
+        // 3. Salviamo subito l'informazione per evitare che riappaia ricaricando la pagina
+        sessionStorage.setItem('newsletterShown', 'true');
+    }
+});
+
+// Funzione per aprire il popup newsletter
 function openNewsletter() {
-    const nl = document.getElementById('newsletterOverlay');
-    if (nl) nl.classList.add('active');
+    document.getElementById('newsletterOverlay').classList.add('active');
 }
 
 function closeNewsletter() {
     const nl = document.getElementById('newsletterOverlay');
     if (nl) nl.classList.remove('active');
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Newsletter automatica dopo 2 secondi
-    if (!localStorage.getItem('newsletterSubscribed')) {
-        setTimeout(openNewsletter, 2000);
-    }
     
-    // Chiudi newsletter cliccando fuori dal box bianco
-    const nlOverlay = document.getElementById('newsletterOverlay');
-    if (nlOverlay) {
-        nlOverlay.addEventListener('click', (e) => {
-            if (e.target === nlOverlay) closeNewsletter();
-        });
-    }
-});
 
 document.addEventListener('DOMContentLoaded', function() {
     const closeBtn = document.querySelector('.close-btn');

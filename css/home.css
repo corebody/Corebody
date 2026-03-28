@@ -874,3 +874,11 @@ nav#sotto sinistra img {
     cursor: pointer;
     margin-left: 15px;
 }
+
+nav#sotto centro p {
+    margin-top: 61px;
+  margin-left: 35px;
+  margin-bottom:8px;
+  font-size: 18px;
+  color: #222;
+}

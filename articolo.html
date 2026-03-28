@@ -7,6 +7,7 @@
     <link rel="icon" href="immagini/SIGLA NERA.png?v=2" sizes="32x32" type="image/png">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/about.css">
     <style>
         /* Hero immagine articolo */
         .article-hero {
@@ -315,6 +316,49 @@
     </style>
 </head>
 <body>
+    <body>
+    <div id="overlay" class="overlay" onclick="closeMenu()"></div>
+
+    <!-- Menu Sidebar -->
+<div id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+        <div class="search-group">
+            <img src="immagini/lente ricerca icon nera-05.png" alt="cerca" id="searchIcon" class="search-icon" onclick="toggleSearch()">
+            <input type="text" id="searchInput" class="search-input" placeholder="Cerca in Corebody..." onkeyup="searchArticles()">
+        </div>
+        
+        <span class="close-btn" onclick="closeMenu()">&times;</span>
+    </div>
+    
+    <div id="searchResults" class="search-results"></div>
+    
+    <a href="categoria.html?cat=fashion">FASHION</a>
+    <a href="categoria.html?cat=beauty">BEAUTY AND WELLNESS</a>
+    <a href="categoria.html?cat=art">ART</a>
+    <a href="#">SHOP</a>
+    <div class="basso">
+        <a href="about.html">ABOUT</a>
+        <a href="submission.html">SUBMISSION</a>
+        <a href="contact.html">CONTACT</a>
+    </div>
+</div>
+
+  <!-- HEADER -->
+              <nav>
+                <ul>
+                    <destra>
+                        <img id="menuIcon" src="immagini/menu a tendina icon nera [Convertito]-04.png" alt="menu" style="height: 30px; width: 30px;" onclick="openMenu()">
+                    </destra>
+                    <centro>
+                        <a href="index.html"><img src="immagini/LOGO CENTRATO.png" alt="Corebody" class="cb-logo"></a>
+                    </centro>
+                    <sinistra>
+                        <a href="https://www.instagram.com/core.body_/?utm_source=ig_web_button_share_sheet" target="_blank"><img src="immagini/ig icon nera-01.png" alt="instagram"></a>
+                        <a href="https://www.tiktok.com/@core.body_?_r=1&_t=ZN-94shnajRxjC" target="_blank"><img src="immagini/tik tok icon nera-02.png" alt="tiktok"></a>
+                        <a href="https://pin.it/76AwW3rE0" target="_blank"><img src="immagini/pinterest icon nera-03.png" alt="pinterest"></a>
+                    </sinistra>
+                </ul>
+            </nav>
     <!-- Progress bar -->
     <div class="reading-progress" id="progressBar"></div>
     
@@ -360,16 +404,41 @@
         </div>
     </div>
     
-    <!-- Footer -->
-    <footer class="article-footer">
-        <img src="immagini/LOGO NERO.png" alt="Corebody">
-        <div class="article-footer-social">
-            <a href="https://www.instagram.com/core.body_?igsh=MXh5bnN2M24ydG1pNg%3D%3D&utm_source=qr" target="_blank"><img src="immagini/ig icon nera-01.png" alt="Instagram"></a>
-            <a href="https://www.tiktok.com/@core.body_?_r=1&_t=ZN-94shnajRxjCm" target="_blank"><img src="immagini/tik tok icon nera-02.png" alt="TikTok"></a>
-            <a href="https://www.pinterest.com" target="_blank"><img src="immagini/pinterest icon nera-03.png" alt="Pinterest"></a>
-        </div>
-    </footer>
-
+            <section class="chiusa">
+            <div class="sezione_finale">
+            <div class="scritta_centro">
+                <a href="index.html">
+                <img src="immagini/LOGO CENTRATO.png" alt="Corebody" class="titolo">
+                </a>
+            <div class="basso">
+                <a href="about.html" class="about-line">ABOUT</a>
+                <a href="submission.html">SUBMISSION</a>
+                <a href="contact.html">CONTACT</a>
+                </div>
+            </div>
+            <div class="sotto" >
+            <nav id="sotto">
+                <ul>
+                    <destra>
+                        <p style="font-weight: bolder;">
+                            Be the first to see
+                        </p>
+                        <p> resta aggiornato sulle novità di Corebody </p>
+                        <a href="#" class="join-us-link" onclick="openNewsletter(); return false;">JOIN US</a>
+                    </destra>
+                    <centro>
+                        <p> Credits fotografici</p>
+                    </centro>
+                    <sinistra>
+                        <a href="https://www.instagram.com/core.body_?igsh=MXh5bnN2M24ydG1pNg%3D%3D&utm_source=qr" target="_blank"><img src="immagini/ig icon nera-01.png" alt="instagram"></a>
+                        <a href="https://www.tiktok.com/@core.body_?_r=1&_t=ZN-94shnajRxjC" target="_blank"><img src="immagini/tik tok icon nera-02.png" alt="tiktok"></a>
+                        <a href="https://pin.it/76AwW3rE0" target="_blank"><img src="immagini/pinterest icon nera-03.png" alt="pinterest"></a>
+                    </sinistra>
+                </ul>
+            </nav>
+            </div>
+            </div>
+        </section>
     <script>
         // Ottieni l'ID dell'articolo dall'URL
         const urlParams = new URLSearchParams(window.location.search);
@@ -458,6 +527,189 @@
         function shareOnPinterest() {
             window.open('https://pinterest.com/pin/create/button/?url=' + encodeURIComponent(window.location.href), '_blank');
         }
+
+// Funzione per aprire il popup newsletter
+function openNewsletter() {
+    document.getElementById('newsletterOverlay').classList.add('active');
+}
+
+// Variabile globale per gli articoli
+var articoliData = [];
+
+// Carica gli articoli dal JSON
+fetch('articoli.json')
+    .then(response => response.json())
+    .then(articoli => {
+        articoliData = articoli;
+        var grid = document.getElementById('articlesGrid');
+        
+        articoli.forEach(function(art) {
+            grid.innerHTML += `
+                <article class="article-card" data-id="${art.id}" onclick="window.location='articolo.html?id=${art.id}'" style="cursor: pointer;">
+                    <img src="${art.immagine}" alt="${art.categoria}" class="article-image">
+                    <div class="article-content">
+                        <h3 class="article-category">${art.categoria}</h3>
+                        <p class="article-date">${art.data}</p>
+                        <h2 class="article-title">${art.titolo}</h2>
+                        <p class="article-text">${art.anteprima}</p>
+                    </div>
+                </article>
+            `;
+        });
+    })
+    .catch(error => console.error('Errore nel caricamento degli articoli:', error));
+// --- 1. GESTIONE MENU SIDEBAR ---
+function toggleSearch() {
+    const input = document.getElementById("searchInput");
+    
+    if (input) {
+        // Se l'input è nascosto o non ha stile, lo mostriamo
+        if (input.style.display === "none" || input.style.display === "") {
+            input.style.display = "block";
+            input.focus();
+        } else {
+            // Se è già visibile, lo nascondiamo e svuotiamo la ricerca
+            input.style.display = "none";
+            input.value = "";
+            
+            // Opzionale: pulisce anche i risultati della ricerca sotto
+            const results = document.getElementById("searchResults");
+            if (results) results.innerHTML = "";
+        }
+    }
+}
+
+function closeMenu() {
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("overlay");
+    const menuIcon = document.getElementById("menuIcon");
+    const searchInput = document.getElementById("searchInput");
+    const searchResults = document.getElementById("searchResults");
+    
+    if (sidebar) {
+        sidebar.style.width = "0";
+        overlay.style.display = "none";
+        if (menuIcon) menuIcon.style.opacity = "1";
+        
+        // Reset: nascondiamo l'input e puliamo i risultati
+        if (searchInput) {
+            searchInput.style.display = "none";
+            searchInput.value = "";
+        }
+        if (searchResults) searchResults.innerHTML = "";
+    }
+}
+function openMenu() {
+    console.log("Apertura menu...");
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("overlay");
+    const menuIcon = document.getElementById("menuIcon");
+    
+    if (sidebar && overlay) {
+        sidebar.style.width = (window.innerWidth <= 768) ? "100%" : "37%";
+        overlay.style.display = "block";
+        if (menuIcon) menuIcon.style.opacity = "0";
+    }
+}
+
+function searchArticles() {
+    var input = document.getElementById("searchInput").value.toLowerCase();
+    var resultsContainer = document.getElementById("searchResults");
+    resultsContainer.innerHTML = "";
+    
+    if (input.length < 2) {
+        return;
+    }
+    
+    // Cerca negli articoli dal JSON
+    var foundArticles = articoliData.filter(function(art) {
+        return art.titolo.toLowerCase().includes(input) || 
+               art.categoria.toLowerCase().includes(input) || 
+               art.anteprima.toLowerCase().includes(input) ||
+               art.contenuto.toLowerCase().includes(input);
+    });
+    
+    if (foundArticles.length === 0) {
+        resultsContainer.innerHTML = "<p class='no-results'>Nessun risultato trovato</p>";
+        return;
+    }
+    
+    // Mostra massimo 3 risultati
+    var maxResults = Math.min(foundArticles.length, 3);
+    for (var i = 0; i < maxResults; i++) {
+        var art = foundArticles[i];
+        var resultItem = document.createElement("a");
+        resultItem.href = "articolo.html?id=" + art.id;
+        resultItem.className = "search-result-item";
+        resultItem.textContent = art.titolo + " (" + art.categoria + ")";
+        resultsContainer.appendChild(resultItem);
+    }
+    
+    // Se ci sono più di 3 risultati, mostra "di più"
+    if (foundArticles.length > 3) {
+        localStorage.setItem('searchResults', JSON.stringify(foundArticles));
+        
+        var moreLink = document.createElement("a");
+        moreLink.href = "ricerca.html";
+        moreLink.className = "search-more-link";
+        moreLink.textContent = "di più (" + (foundArticles.length - 3) + " altri)";
+        resultsContainer.appendChild(moreLink);
+    }
+}
+function closeNewsletter() {
+    document.getElementById('newsletterOverlay').classList.remove('active');
+}
+
+// URL del tuo Google Apps Script - SOSTITUISCI con il tuo URL dopo il deploy
+var GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyDJ-gAtJx77iI1iO7aeW-AGVsubv1rLG3pvuxhnmGOBaS9eFBUrlx1F7blMN7fiRD3sg/exec';
+
+function submitNewsletter(event) {
+    event.preventDefault();
+    var email = document.getElementById('newsletterEmail').value;
+    var submitBtn = document.querySelector('.newsletter-popup button');
+    
+    // Disabilita il bottone durante l'invio
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'INVIO IN CORSO...';
+    
+    // Invia richiesta a Google Apps Script
+    fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: email })
+    })
+    .then(function() {
+        console.log('Richiesta inviata con successo!');
+        
+        // Mostra messaggio di successo
+        document.getElementById('newsletterForm').style.display = 'none';
+        document.getElementById('newsletterSuccess').classList.add('show');
+        
+        // Salva che l'utente si è iscritto
+        localStorage.setItem('newsletterSubscribed', 'true');
+        
+        // Chiudi popup dopo 2 secondi
+        setTimeout(() => {
+            closeNewsletter();
+        }, 2000);
+    })
+    .catch(function(error) {
+        console.error('Errore:', error);
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'ISCRIVITI';
+        alert('Si è verificato un errore. Riprova più tardi.');
+    });
+}
+
+// Chiudi popup cliccando fuori
+document.getElementById('newsletterOverlay').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeNewsletter();
+    }
+});
     </script>
 </body>
 </html>

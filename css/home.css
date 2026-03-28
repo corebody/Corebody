@@ -482,14 +482,14 @@ immagine_iniziale .titolo {
 }
 
 .article-content {
-    padding: 0px;
+    padding: 10px;
     flex-grow: 1;
     margin-left: 15px;
 }
 
 .article-category {
     font-family: 'secondo_font', sans-serif;
-    font-size: 25px;
+    font-size: 35px;
     margin-top: 5px;
     margin-bottom: 2px;
     font-weight: normal;
@@ -497,7 +497,7 @@ immagine_iniziale .titolo {
 
 .article-date {
     font-family:Arial, Helvetica, sans-serif;
-    font-size: 9px;
+    font-size: 19px;
     color: #000;
     margin-top: 0px;
     margin-bottom: 15px;
@@ -505,7 +505,7 @@ immagine_iniziale .titolo {
 
 .article-title {
     font-family: sans-serif;
-    font-size: 18px;
+    font-size: 28px;
     color: #852936;
     font-style: italic;
     margin-bottom: 15px;
@@ -514,7 +514,7 @@ immagine_iniziale .titolo {
 
 .article-text {
     font-family: sans-serif;
-    font-size: 10px;
+    font-size: 16px;
     line-height: 1.6;
     color: #333;
 }

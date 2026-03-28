@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corebody - Nuda Tela</title>
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/nudatela.css">
+    <style>
+        li{
+  font-family: 'avenir', serif;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: justify;
+    text-align-last: left;
+    padding: 10px;
+}
+    </style>
+</head>
+    <body>
+    <!-- Popup Newsletter -->
+    <div id="newsletterOverlay" class="newsletter-overlay">
+        <div class="newsletter-popup">
+            <span class="newsletter-close" onclick="closeNewsletter()">&times;</span>
+            <h2>BE THE FIRST TO SEE</h2>
+            <p>Resta aggiornato sulle novità di Corebody</p>
+            <form id="newsletterForm" onsubmit="submitNewsletter(event)">
+                <input type="email" id="newsletterEmail" placeholder="Inserisci la tua email" required>
+                <button type="submit">JOIN US</button>
+            </form>
+            <p class="newsletter-success" id="newsletterSuccess">Grazie per esserti iscritto!</p>
+        </div>
+    </div>
+
+    <!-- Overlay per chiudere il menu -->
+    <div id="overlay" class="overlay" onclick="closeMenu()"></div>
+
+<div id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+        <div class="search-group">
+            <img src="../immagini/lente ricerca icon nera-05.png" alt="cerca" id="searchIcon" class="search-icon" onclick="toggleSearch()">
+            <input type="text" id="searchInput" class="search-input" placeholder="Cerca in Corebody..." onkeyup="searchArticles()">
+        </div>
+        
+        <span class="close-btn" onclick="closeMenu()">&times;</span>
+    </div>
+    
+    <div id="searchResults" class="search-results"></div>
+    
+    <a href="categoria.html?cat=fashion">FASHION</a>
+    <a href="categoria.html?cat=beauty">BEAUTY AND WELLNESS</a>
+    <a href="categoria.html?cat=art">ART</a>
+    <a href="#">SHOP</a>
+    <div class="basso">
+        <a href="about.html">ABOUT</a>
+        <a href="submission.html">SUBMISSION</a>
+        <a href="contact.html">CONTACT</a>
+    </div>
+</div>
+
+  <!-- HEADER -->
+              <nav>
+                <ul>
+                    <destra>
+                        <img id="menuIcon" src="../immagini/menu a tendina icon nera [Convertito]-04.png" alt="menu" style="height: 30px; width: 30px;" onclick="openMenu()">
+                    </destra>
+                    <centro>
+                        <a href="index.html"><img src="../immagini/LOGO CENTRATO.png" alt="Corebody" class="cb-logo"></a>
+                    </centro>
+                    <sinistra>
+                        <a href="https://www.instagram.com/core.body_/?utm_source=ig_web_button_share_sheet" target="_blank"><img src="../immagini/ig icon nera-01.png" alt="instagram"></a>
+                        <a href="https://www.tiktok.com/@core.body_?_r=1&_t=ZN-94shnajRxjC" target="_blank"><img src="../immagini/tik tok icon nera-02.png" alt="tiktok"></a>
+                        <a href="https://pin.it/76AwW3rE0" target="_blank"><img src="../immagini/pinterest icon nera-03.png" alt="pinterest"></a>
+                    </sinistra>
+                </ul>
+            </nav>
+
+  <!-- main-->
+<main class="editorial-container">
+    <section class="editorial-page-one">
+    <div class="column-text">
+        <div class="title-container">
+            <h1 class="main-title">NUDA TELA </h1>
+        </div>
+        
+        <div class="credits-container">
+            <ul>
+                <li><strong>Art director and stylist:</strong> Francesca Viteritti (@francesca_viteritti_) </li>
+                <li><strong>Photographer:</strong> Chiara Filippi (@chiarafilippi.ph) </li>
+                <li><strong>Model:</strong> Polly by Fashion Artwise (@fashionartwise) </li>
+                <li><strong>Make-up:</strong> Iram Rahman (@iramrahman_) </li>
+                <li><strong>Hair Styling:</strong> Claudia Rave (@claudiaravemakeup)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="column-image">
+        <img src="../immagini/articolo_1.jpg" alt="Nuda Tela Editorial" class="hero-image">
+        <div class="image-caption">
+            <p>copricapo: Deformazione del cranio by Andrea Principia </p>
+            <p>top: Costanza Lilli </p>
+        </div>
+    </div>
+</section>
+    
+    <header class="editorial-header">
+        <h1>NUDA TELA</h1>
+    </header>
+
+    <div class="editorial-grid">
+        <section class="credits-main">
+            <ul>
+                <li>Art director and stylist: Francesca Viteritti (@francesca_viteritti_) [cite: 2]</li>
+                <li>Photographer: Chiara Filippi (@chiarafilippi.ph) [cite: 2]</li>
+                <li>Model: Polly by Fashion Artwise (@fashionartwise) [cite: 2]</li>
+                <li>Make-up: Iram Rahman (@iramrahman_) [cite: 2]</li>
+                <li>Hair Styling: Claudia Rave (@claudiaravemakeup) [cite: 3]</li>
+            </ul>
+        </section>
+
+        <div class="image-row">
+            <div class="image-wrapper">
+                <img src="../immagini/imm1.jpg" alt="Editorial Image 1">
+                <ul class="caption">
+                    <li>giacca: Costanza Lilli [cite: 9]</li>
+                    <li>body necklace: Ace of Pentacles [cite: 11]</li>
+                </ul>
+            </div>
+            <div class="image-wrapper">
+                <img src="../immagini/imm2.jpg" alt="Editorial Image 2">
+                <ul class="caption">
+                    <li>culotte: stylist's own [cite: 10]</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="image-single">
+            <img src="../immagini/imm3.jpg" alt="Editorial Image 3">
+            <ul class="caption">
+                <li>copricapo: Deformazione del cranio by Andrea Principia [cite: 14]</li>
+                <li>top e gonna: Costanza Lilli [cite: 14]</li>
+            </ul>
+        </div>
+
+        <div class="image-single">
+            <img src="../immagini/imm4.jpg" alt="Editorial Image 4">
+            <ul class="caption">
+                <li>abito: Leopardessa [cite: 21]</li>
+                <li>copricapo: Ace of Pentacles [cite: 21]</li>
+                <li>collant e scarpe: stylist's own [cite: 21]</li>
+            </ul>
+        </div>
+
+        <div class="image-single">
+            <img src="../immagini/imm5.jpg" alt="Editorial Image 5">
+            <ul class="caption">
+                <li>copricapo: Deformazione del cranio by Andrea Principia [cite: 22]</li>
+                <li>top e gonna: Costanza Lilli [cite: 23]</li>
+                <li>sottogonna: stylist's own [cite: 24]</li>
+            </ul>
+        </div>
+    </div>
+</main>
+            <section class="chiusa">
+            <div class="sezione_finale">
+            <div class="scritta_centro">
+                            <a href="index.html">
+                                <img src="../immagini/LOGO CENTRATO.png" alt="Corebody" class="titolo">
+                            </a>
+            <div class="basso">
+                <a href="about.html" class="about-line">ABOUT</a>
+                <a href="submission.html">SUBMISSION</a>
+                <a href="contact.html">CONTACT</a>
+                </div>
+            </div>
+            <div class="sotto" >
+              <nav id="sotto">
+                <ul>
+                    <destra>
+                        <p style="font-weight: bolder;">
+                            Be the first to see
+                        </p>
+                        <p> resta aggiornato sulle novità di Corebody </p>
+                        <a href="#" class="join-us-link" onclick="openNewsletter(); return false;">JOIN US</a>
+                    </destra>
+                    <centro>
+                        <p> Credits fotografici</p>
+                    </centro>
+                    <sinistra>
+                        <a href="https://www.instagram.com/core.body_/?utm_source=ig_web_button_share_sheet" target="_blank"><img src="../immagini/ig icon nera-01.png" alt="instagram"></a>
+                        <a href="https://www.tiktok.com/@core.body_?_r=1&_t=ZN-94shnajRxjC" target="_blank"><img src="../immagini/tik tok icon nera-02.png" alt="tiktok"></a>
+                        <a href="https://pin.it/76AwW3rE0" target="_blank"><img src="../immagini/pinterest icon nera-03.png" alt="pinterest"></a>
+                    </sinistra>
+                </ul>
+            </nav>
+            </div>
+            </div>
+        </section>
+    </main>
+
+
+    </main>
+<script src="../funzioni.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+.editorial-container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0px 20px;
+    }
+    /* Reset e basi per questa sezione */
+    .editorial-page-one {
+        display: flex;
+        max-height: 87vh;
+        background-color: #ffffff;
+    }
+
+    /* Colonna sinistra (Bianca) */
+    .column-text {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Spinge i credits in basso e il titolo in alto/centro */
+        padding: 60px;
+    }
+
+    .title-container {
+        margin-top: 15vh; /* Posizionamento verticale del titolo */
+    }
+
+    .main-title {
+        font-family: 'avenir', sans-serif;
+        font-weight: 300;
+        font-size: 80px;
+        letter-spacing: 12px;
+        color: #000;
+        margin: 0;
+    }
+
+    .credits-container ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .credits-container li {
+        font-family: 'avenir', serif;
+        font-size: 14px; /* Dimensione ridotta come nello screenshot */
+        line-height: 1.4;
+        text-align: left;
+        padding: 2px 0;
+    }
+
+    /* Colonna destra (Immagine) */
+    .column-image {
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* L'immagine copre tutta l'area */
+        display: block;
+    }
+
+    /* Didascalia sopra l'immagine */
+    .image-caption {
+        position: absolute;
+        bottom: 40px;
+        left: 40px;
+        color: #fff; /* Testo bianco per contrasto */
+    }
+
+    .image-caption p {
+        font-family: 'avenir', serif;
+        font-size: 13px;
+        margin: 2px 0;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Ombra per leggibilità */
+    }
+
+    /* Responsive per Tablet e Mobile */
+    @media (max-width: 1024px) {
+        .main-title { font-size: 50px; }
+    }
+
+    @media (max-width: 768px) {
+        .editorial-page-one {
+            flex-direction: column; /* Stack verticale su mobile */
+        }
+        .column-text {
+            padding: 40px 20px;
+            min-height: auto;
+        }
+        .title-container { margin-top: 0; margin-bottom: 40px; }
+        .column-image { height: 70vh; }
+    }
+
+
+
+
+
+
+    .editorial-header h1 {
+        font-family: 'avenir', serif;
+        font-size: 48px;
+        text-align: center;
+        letter-spacing: 5px;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+    }
+
+    .editorial-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+    }
+
+    .credits-main {
+        border-bottom: 1px solid #000;
+        margin-bottom: 40px;
+    }
+
+    .credits-main ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .image-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .image-wrapper img, .image-single img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .caption {
+        list-style: none;
+        padding: 15px 0 !important;
+        margin-bottom: 30px;
+    }
+
+    .caption li {
+        font-size: 16px !important; /* Leggermente più piccolo per le didascalie */
+        padding: 2px 0 !important;
+        text-transform: lowercase;
+    }
+
+    @media (max-width: 768px) {
+        .image-row {
+            grid-template-columns: 1fr;
+        }
+        .editorial-header h1 {
+            font-size: 32px;
+        }
+    }

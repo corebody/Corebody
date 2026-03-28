@@ -473,7 +473,7 @@
                     if (correlati.length > 0) {
                         correlati.forEach(art => {
                             relatedGrid.innerHTML += `
-                                <article class="article-card" onclick="window.location='articolo.html?id=${art.id}'" style="cursor: pointer;">
+                                <article class="article-card" onclick="window.location='${art.url}'" style="cursor: pointer;">
                                     <img src="${art.immagine}" alt="${art.categoria}" class="article-image">
                                     <div class="article-content">
                                         <h3 class="article-category">${art.categoria}</h3>
@@ -545,7 +545,7 @@ fetch('articoli.json')
         
         articoli.forEach(function(art) {
             grid.innerHTML += `
-                <article class="article-card" data-id="${art.id}" onclick="window.location='articolo.html?id=${art.id}'" style="cursor: pointer;">
+                <article class="article-card" data-id="${art.id}" onclick="window.location='${art.url}" style="cursor: pointer;">
                     <img src="${art.immagine}" alt="${art.categoria}" class="article-image">
                     <div class="article-content">
                         <h3 class="article-category">${art.categoria}</h3>
@@ -639,7 +639,7 @@ function searchArticles() {
     for (var i = 0; i < maxResults; i++) {
         var art = foundArticles[i];
         var resultItem = document.createElement("a");
-        resultItem.href = "articolo.html?id=" + art.id;
+        resultItem.href = art.url;
         resultItem.className = "search-result-item";
         resultItem.textContent = art.titolo + " (" + art.categoria + ")";
         resultsContainer.appendChild(resultItem);

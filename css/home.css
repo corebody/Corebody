@@ -415,7 +415,6 @@ immagine_iniziale .titolo {
     font-size: 42px;
     color: #333;
     text-decoration: none;
-    border-bottom: 1px solid #ddd;
     white-space: normal;
     word-wrap: break-word;
     overflow: hidden;

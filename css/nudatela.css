@@ -148,6 +148,7 @@
     /* Colore: Nero perché ora lo sfondo è bianco e le foto sono "intere" */
     color: white; 
 }
+
 /* --- RESPONSIVE --- */
 @media (max-width: 900px) {
     .prima_pagina, .seconda_pagina {
@@ -455,4 +456,93 @@
     
     text-align: left;
     width: 100%; /* Allineata alla larghezza delle immagini */
+}
+
+/* --- LATO DESTRO (FOTO INCORNICIATA) --- */
+.right_framed_1 {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 27vh 4% 3vh 15%;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+.right_framed_1 .frame_1 {
+    width: 100%; /* Occupa lo spazio lasciato dal padding */
+    display: flex;
+    flex-direction: column;
+}
+
+.right_framed_1 .frame_1 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Caption sotto la foto su sfondo bianco (Nera) */
+.caption_basso_destra_nera {
+    /* RIMOSSO position: absolute o fixed */
+    margin-top: 15px; 
+    font-family: 'Avenir', sans-serif;
+    font-size: 11px;
+    line-height: 1.3;
+    font-weight: 100;
+    color: black; /* Deve essere nera perché lo sfondo è bianco */
+    text-align: right; /* Allineata all'inizio della foto */
+    align-items:end;
+        width: 100%; /* Allineata alla larghezza della foto */
+        right: 10%; /* Allineata al bordo destro della foto */
+
+}
+
+
+
+.sesta_pagina {
+    display: flex;
+    width: 100%;
+    height: auto;          /* L'altezza è dettata dalla foto orizzontale */
+    align-items: stretch;  /* Mantiene le due colonne uguali */
+    background-color: #fff; /* Sfondo bianco */
+}
+
+.caption_finale {
+ margin-top: 15px; 
+    font-family: 'Avenir', sans-serif;
+    font-size: 11px;
+    line-height: 1.3;
+    font-weight: 100;
+    color: black; /* Deve essere nera perché lo sfondo è bianco */
+    text-align: left; /* Allineata all'inizio della foto */
+    align-items:end;
+        width: 100%; /* Allineata alla larghezza della foto */
+        right: 10%; /* Allineata al bordo destro della foto */
+
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .image-container-final, .caption_finale {
+        width: 90%;
+    }
+}
+/* --- LATO DESTRO (FOTO INCORNICIATA) --- */
+.right_framed_2 {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+   padding: 3% 3% 3% 3%;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+.right_framed_2 .frame_2 {
+    width: 100%; /* Occupa lo spazio lasciato dal padding */
+    display: flex;
+    flex-direction: column;
+}
+
+.right_framed_2 .frame_2 img {
+    width: 100%;
+    height: auto;
+    display: block;
 }

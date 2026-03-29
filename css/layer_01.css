@@ -394,7 +394,7 @@ background-color: #ffffff;
 /* Didascalia sopra la foto a destra (fuori dalla foto, allineata a dx) */
 .caption_alto_destra_p {
     position: absolute;
-    top: -60px;            /* Sposta il testo 25px SOPRA la foto */
+    top: -65px;            /* Sposta il testo 25px SOPRA la foto */
     right: 0;              /* Allinea al bordo destro della foto */
     z-index: 10;
     

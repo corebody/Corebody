@@ -7,6 +7,14 @@
     overflow: hidden;
     align-items: stretch; /* FONDAMENTALE: fa sì che .left sia alto quanto la foto a destra */
 }
+@font-face {
+    font-family: 'titolo';
+    src: url('../font/ITC_American/ITC\ American\ Typewriter\ Light\ Regular.otf ')format('opentype');
+}
+h1{
+    font-family: 'titolo', sans-serif;
+    font-size: 60pt;
+}
 
 /* LATO TESTO (1a Pagina) */
 .left {

@@ -64,7 +64,7 @@
     }
 
     .sidebar a {
-        font-size: 28px;
+        font-size: 42px;
         padding: 15px 30px;
     }
 
@@ -75,13 +75,13 @@
     }
 
     .basso a {
-        font-size: 24px;
+        font-size: 30px;
         text-align: left;
     }
 
     /* 5. Sezione Finale / Footer */
     .sezione_finale {
-        height: auto;
+        height: 30vh;
         padding: 50px 0;
     }
 
@@ -126,6 +126,47 @@
     .newsletter-popup h2 {
         font-size: 35px;
     }
+    /* Update per allineare lente e X perfettamente ai lati */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Riduciamo o azzeriamo il padding laterale per un controllo millimetrico */
+    padding: 15px 30px; 
+    min-height: 60px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.search-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* Rimuoviamo eventuali margini che potrebbero spostare la lente */
+    margin: 0; 
+}
+
+.search-icon {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    /* Assicuriamoci che non ci siano margini residui */
+    margin: 0; 
+}
+.search-results a {
+font-family: 'avenir', sans-serif;
+font-size: 30px;
+padding: 10px 20px;
+}
+
+.close-btn {
+    width: 25px; /* Adattala per renderla visivamente simile alla lente */
+    height: 25px;
+    cursor: pointer;
+    /* Rimuoviamo il posizionamento absolute che avevi in base.css */
+    position: static !important; 
+    margin: 0 !important;
+}
 }
 
 /* ============================================================
@@ -155,4 +196,202 @@ width: 100%;
 height: 100vh;
 
 }
+}
+/* ============================================================
+   DESIGN RESPONSIVE PER MOBILE (Sotto i 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+
+    /* 1. Reset del contenitore principale */
+    .sezione_finale {
+        height: auto !important;
+        min-height: 35vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* 2. Logo sempre in alto */
+    .scritta_centro {
+        margin-top: -236px;
+        order: 1; /* Primo elemento */
+    }
+
+    .scritta_centro .basso {
+        display: none !important; /* Nasconde About, Submission, Contact */
+    }
+
+    /* 3. Gestione ordine elementi in nav#sotto */
+    nav#sotto ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+        width: 100%;
+        padding: 0;
+    }
+
+    /* BE THE FIRST TO SEE (Secondo elemento) */
+    nav#sotto destra {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center !important;
+        margin-top: 35px;
+    }
+
+    /* ICONE SOCIAL (Terzo elemento - Ora sopra i crediti) */
+    nav#sotto sinistra {
+        order: 1; 
+        display: flex;
+        flex-direction: row !important;
+        gap: 25px;
+        justify-content: center;
+        margin: 0 !important;
+    }
+
+    nav#sotto sinistra img {
+        width: 30px;
+        height: auto;
+    }
+
+    /* CREDITI EDITORIALI (Quarto elemento - In fondo) */
+    nav#sotto centro {
+        order: 3;
+        text-align: center !important;
+        margin: 0 !important;
+        max-width: 85%;
+    }
+
+    nav#sotto centro p {
+        margin: 0 !important;
+        font-size: 10px;
+        line-height: 1.4;
+        color: #333;
+    }
+
+    /* Reset margini testi */
+    nav#sotto destra p, .join-us-link {
+        margin-left: 0 !important;
+    }
+}
+@media (max-width: 768px) {
+    /* Nasconde le icone social in alto quando la sidebar è attiva */
+    body.menu-aperto nav sinistra {
+        display: none !important;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN - PAGINA ABOUT
+   ============================================================ */
+
+@media (max-width: 768px) {
+    
+    /* 1. NAVIGAZIONE SUPERIORE */
+    /* Nasconde i social in alto quando il menu è aperto (come richiesto) */
+    body.menu-aperto nav sinistra {
+        display: none !important;
+    }
+
+    nav ul {
+        padding: 10px 20px;
+    }
+
+    /* 2. LAYOUT CONTENUTI (GRIGLIA) */
+    /* Trasformiamo le griglie complesse in una colonna singola pulita */
+    .cb-text-row, .cb-text-row_2 {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 25px; /* Più spazio ai lati su mobile */
+
+    }
+
+    /* Nascondiamo le colonne vuote che servivano per il design desktop */
+    .cb-column.cb-left:empty {
+        display: none;
+    }
+
+    /* 3. TITOLI E PARAGRAFI */
+    .cb-section-title {
+        font-size: 30px; /* Più piccolo per smartphone */
+        text-align: left;
+        margin-top: 40px;
+        margin-bottom: 15px;
+    }
+
+    .cb-paragraph {
+        font-size: 18px;
+        line-height: 1.6;
+
+    }
+
+    /* Sistemiamo la lista dei valori */
+    ul.cb-paragraph {
+        padding-left: 20px;
+    }
+    
+    li {
+        font-size: 18px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 15px;
+    }
+
+
+    /* 5. MARQUEE (IL TESTO SCORREVOLE ABOUT) */
+    .latest-title {
+        font-size: 35px; /* Titolo About più piccolo */
+    }
+
+    .logo_piccolo_latest {
+        width: 25px;
+        height: 25px;
+        margin: 0 20px;
+    }
+    .cb-logo {
+        margin-left: 28px;
+        max-width: 270px;
+        margin-top:40px;
+    }
+    nav ul img{
+        margin: 2px;
+width: 23px ;
+height: 23px ;
+    }
+/* 1. Forza il contenitore ad occupare tutto lo spazio */
+.cb-column.cb-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Spinge tutto il contenuto del div a destra */
+    width: 100%;
+}
+
+/* 2. Forza il testo del titolo a destra */
+.cb-right .cb-section-title {
+    text-align: right !important;
+    display: block !important;
+    width: 100% !important;
+    margin-right: 0 !important;
+}
+.cb-paragraph:nth-of-type(6) {
+    margin-bottom: 15px;
+}
+
+
+
+.blocco-hero {
+    height: 45vh !important; /* Ridotto da 65vh per compattare */
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+.hero_bg{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+     background-image: url("../immagini/Screenshot\ 2026-03-20\ alle\ 16.46.38.png");
+}
+
 }

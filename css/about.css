@@ -108,23 +108,6 @@ font-family: 'avenir', serif;
 .sidebar {
 background-color: #fefefef7;
 }
-/* Responsivo minimo */
-@media (max-width: 900px) {
-
-  .cb-text-row {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 40px;
-  }
-
-  .cb-section-title {
-    text-align: left;
-  }
-
-  .cb-paragraph {
-    max-width: none;
-  }
-}
 
 
 .cb-paragraph {
@@ -211,9 +194,9 @@ ul.cb-paragraph li:nth-child(7) { animation-delay: 1.4s; }
   top: 0;
   left: 0;
   width: 100%;
-  height: 90%;
+  height: 100%;
   /* Inserisci qui l'URL dell'immagine */
-  background-image: url("../immagini/Screenshot\ 2026-03-20\ alle\ 16.46.38.png");
+  background-image: url("../Francesca_1°shoot/J1A7426.jpeg");
   background-attachment: fixed; /* L'effetto "DME Magazine" */
   background-position: center;
   background-repeat: no-repeat;

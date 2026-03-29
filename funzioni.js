@@ -151,3 +151,33 @@ articoliFiltrati.forEach(function(art) {
         </article>
     `;
 });
+
+function openMenu() {
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("overlay");
+    const menuIcon = document.getElementById("menuIcon");
+    
+    if (sidebar) {
+        sidebar.style.width = "100%"; 
+        if (overlay) overlay.style.display = "block";
+        if (menuIcon) menuIcon.style.opacity = "0"; // Nasconde l'icona menu stessa
+        
+        // AGGIUNGI QUESTA RIGA:
+        document.body.classList.add("menu-aperto");
+    }
+}
+
+function closeMenu() {
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("overlay");
+    const menuIcon = document.getElementById("menuIcon");
+    
+    if (sidebar) {
+        sidebar.style.width = "0";
+        if (overlay) overlay.style.display = "none";
+        if (menuIcon) menuIcon.style.opacity = "1";
+        
+        // AGGIUNGI QUESTA RIGA:
+        document.body.classList.remove("menu-aperto");
+    }
+}

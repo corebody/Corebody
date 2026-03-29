@@ -23,11 +23,11 @@
         "id": 3,
         "titolo": "Titolo dell'articolo 3",
         "categoria": "BEAUTY",
-        "data": "12 gennaio 2023",
+        "data": "2 febbraio 2026",
         "immagine": "immagini/articolo_3.jpeg",
-        "anteprima": "Anis dolut et voluptas eos imet audis dolomet, vimi fugiae eaturi aut dignetur pelit et delor sum qui blanto quunt lique nimamet molupta aut exerenim volecia cum explit laborio.",
-        "contenuto": "Contenuto completo del terzo articolo sulla bellezza e wellness. Descrivi qui tutti i dettagli, consigli, prodotti, ecc."
-    },
+        "anteprima": "Negli ultimi anni, l’utilizzo della skincare ha subito una trasformazione significativa, cessando di rappresentare esclusivamente un rituale privato confinato allo spazio domestico. Sempre più frequentemente, infatti, la cura della pelle si configura come una pratica esibita e condivisa anche nello spazio pubblico, riflettendo un atteggiamento tipico della Generazione Z, orientato a rendere visibile il prendersi cura di sé. Prodotti beauty quali maschere viso, pimple patch, eye patch e dispositivi per l’hair care non sono più relegati a una dimensione funzionale, ma assumono lo statuto di veri e propri accessori, divenendo elementi integranti dell’outfit e contribuendo alla costruzione dell’immagine personale. Questo editoriale si propone di indagare tale fenomeno, evidenziando come la cura di sé si configuri oggi come un linguaggio visivo. Non si tratta più esclusivamente di aderire a un ideale di perfezione rivolto allo sguardo esterno, quanto piuttosto di condividere apertamente le pratiche che contribuiscono al proprio benessere, rendendo visibile una dimensione intima legata all’attenzione e all’affezione verso il proprio corpo.",
+        "contenuto": "Negli ultimi anni, l’utilizzo della skincare ha subito una trasformazione significativa, cessando di rappresentare esclusivamente un rituale privato confinato allo spazio domestico. Sempre più frequentemente, infatti, la cura della pelle si configura come una pratica esibita e condivisa anche nello spazio pubblico, riflettendo un atteggiamento tipico della Generazione Z, orientato a rendere visibile il prendersi cura di sé. Prodotti beauty quali maschere viso, pimple patch, eye patch e dispositivi per l’hair care non sono più relegati a una dimensione funzionale, ma assumono lo statuto di veri e propri accessori, divenendo elementi integranti dell’outfit e contribuendo alla costruzione dell’immagine personale. Questo editoriale si propone di indagare tale fenomeno, evidenziando come la cura di sé si configuri oggi come un linguaggio visivo. Non si tratta più esclusivamente di aderire a un ideale di perfezione rivolto allo sguardo esterno, quanto piuttosto di condividere apertamente le pratiche che contribuiscono al proprio benessere, rendendo visibile una dimensione intima legata all’attenzione e all’affezione verso il proprio corpo.",
+        "url": "articoli/articolo_3.html"},
     {
         "id": 4,
         "titolo": "Titolo dell'articolo 4",

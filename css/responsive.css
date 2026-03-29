@@ -1,202 +1,158 @@
-/* Ottimizzazione per Mobile (Smartphone) */
-@media (max-width: 768px) {
-    nav ul {
-        padding: 0 15px;
-        gap: 10px; /* Riduce lo spazio tra le icone social */
-    }
-
-    .cb-logo {
-        max-width: 200px; /* Riduce il logo su schermi piccoli */
-        margin-bottom: 15px;
-    }
-
-    /* Regola per la sidebar su mobile */
-    .sidebar a {
-        font-size: 30px; /* Rende i link del menu leggibili ma non giganti */
-        padding: 15px 15px;
-    }
-    .basso{
-        max-width: 449px;
-        max-width: 449px;
-gap: 18px !important;
-margin-top: -68px !important;
-    }
+/* ============================================================
+   TABLET (Sotto i 1024px)
+   ============================================================ */
+@media (max-width: 1024px) {
     .articles-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0px;
-    width: 100%;
-    margin: 0 auto;
-}
-.scritta_centro {
-color: rgb(0, 0, 0);
-text-align: center;
-display: flex;
-align-items: center;
-justify-content: center;
-margin-top: -200px;
-}
-.about-line::after {
-  content: "\00A0"/* 7 spazi non-breaking invisibili */!important ;
-  /* ogni \00A0 = &nbsp; largo come una lettera */
-}
-}
-
-    @media (max-width: 768px) {
-    /* La sidebar deve essere sopra a TUTTO */
-    .sidebar {
-        width: 0;
-        height: 100%;
-        position: fixed;
-        z-index: 999999 !important; /* Aumentato drasticamente */
-        left: 0;
-        top: 0;
-        background-color: #fafaead6;
-        overflow-x: hidden;
-        transition: 0.5s;
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: repeat(2, 1fr); /* Passa da 4 a 2 colonne */
     }
 
-    /* La X deve essere gigante e cliccabile */
-    .close-btn {
-        font-size: 50px; /* Più grande per le dita */
-        cursor: pointer;
-        color: #000;
-        padding: 20px;
-        display: block;
-        text-align: right;
-        position: relative;
-        z-index: 1000000 !important; /* Ancora più sopra della sidebar */
-        pointer-events: auto !important; /* Forza il browser a sentire il tocco */
-        -webkit-tap-highlight-color: transparent; /* Toglie il fastidioso quadrato blu al tocco */
+    .scritta_centro .basso {
+        gap: 50px; /* Riduce lo spazio tra i link nel footer */
     }
 
-    /* Evitiamo che altri contenitori coprano la testata */
-    .sidebar-header {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        pointer-events: auto;
+    .sidebar a {
+        font-size: 35px; /* Testo sidebar leggermente più piccolo */
     }
 }
 
-
-/* Da aggiungere in fondo a about.css */
-@media (max-width: 992px) {
-    .cb-text-row, .cb-text-row_2 {
-        display: block; /* Trasforma la griglia in una colonna singola */
-        padding: 20px;
-    }
-
-    .cb-column {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .cb-section-title {
-        font-size: 28px; /* Ridimensiona i titoli */
-    }
-
-    .blocco-hero {
-        height: 40vh; /* Riduce l'altezza dell'immagine hero su mobile */
-    }
-}
-
+/* ============================================================
+   MOBILE (Sotto i 768px)
+   ============================================================ */
 @media (max-width: 768px) {
+    
+    /* 1. Header e Navigazione */
     immagine_iniziale .titolo {
-        max-width: 90vw; /* Il logo occupa più spazio in larghezza su mobile */
+        max-width: 90vw; /* Il logo occupa più spazio su schermi piccoli */
     }
 
+    nav ul {
+        padding: 10px;
+    }
+
+    nav sinistra {
+        margin-right: 0px; /* Riduce i margini laterali */
+    }
+
+    /* 2. Marquee (LATEST) */
     .latest-title {
-        font-size: 32px; /* Riduce la dimensione del testo che scorre */
+        font-size: 32px; /* Riduce la dimensione del testo scorrevole */
     }
 
     .logo_piccolo_latest {
         width: 25px;
         height: 25px;
-        margin: 0 20px;
-    }
-}
-
-@media (max-width: 600px) {
-    .content-overlay {
-        padding: 20px;
-        font-size: 16px;
-        background: rgba(255, 255, 255, 0.85); /* Aumenta l'opacità per la leggibilità */
+        margin-right: 20px;
+        margin-left: 20px;
     }
 
-    .submission-container, .submission-container_contact {
+    /* 3. Griglia Articoli */
+    .articles-grid {
+        grid-template-columns: 1fr; /* Una sola colonna per massima leggibilità */
+    }
+
+    .article-content {
+        padding: 20px; /* Aumenta lo spazio per il tocco */
+    }
+
+    .article-category {
+        font-size: 28px;
+    }
+
+    /* 4. Sidebar Menu */
+    .sidebar {
+        width: 0; /* Gestito dal JS che hai già impostato a 100% */
+    }
+
+    .sidebar a {
+        font-size: 28px;
+        padding: 15px 30px;
+    }
+
+    .basso {
+        flex-direction: column; /* I link About/Contact si mettono in verticale */
+        gap: 15px;
+        padding-bottom: 30px;
+    }
+
+    .basso a {
+        font-size: 24px;
+        text-align: left;
+    }
+
+    /* 5. Sezione Finale / Footer */
+    .sezione_finale {
         height: auto;
-        min-height: 100vh;
-        align-items: center; /* Centra il form/testo verticalmente */
+        padding: 50px 0;
+    }
+
+    .scritta_centro .titolo {
+        max-width: 80vw;
+        margin-bottom: 40px;
+    }
+
+    .scritta_centro .basso {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 0;
+    }
+
+    nav#sotto {
+        display: flex;
+        flex-direction: column; /* Colonna singola per i crediti del footer */
+        gap: 30px;
+        text-align: center;
+    }
+
+    nav#sotto ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav#sotto destra, nav#sotto centro, nav#sotto sinistra {
+        text-align: center !important;
+        margin: 0 auto;
+    }
+
+    nav#sotto destra p, .join-us-link, nav#sotto centro p {
+        margin-left: 0;
+    }
+
+    /* 6. Newsletter Popup */
+    .newsletter-popup {
+        padding: 25px;
+        width: 85%;
+    }
+
+    .newsletter-popup h2 {
+        font-size: 35px;
     }
 }
 
-/* Responsive per la sezione finale (chiusa) */
-@media (max-width: 768px) {
-  .chiusa .sezione_finale {
-    padding: 0 10px;
-  }
-  .chiusa .scritta_centro {
-    text-align: center;
-    padding: 0;
-  }
-  .chiusa .titolo {
-    max-width: 80vw;
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-  }
-  .chiusa .basso {
-
-    gap: 10px;
-    align-items: center;
-    padding: 50px;
-  }
-  .chiusa .basso a {
-    font-size: 22px;
-    padding: 8px 0;
-  }
-  .chiusa .sotto nav ul {
-    flex-direction: column;
-    gap: 10px;
-    padding: 0;
-  }
-  .chiusa .sotto destra,
-  .chiusa .sotto centro,
-  .chiusa .sotto sinistra {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    display: block;
-  }
-  .chiusa .sotto p {
-    font-size: 14px;
-    margin: 4px 0;
-  }
-  .chiusa .sotto a img {
-    width: 28px;
-    height: 28px;
-    margin: 0 6px;
-  }
-  .join-us-link {
-    font-size: 15px;
-    padding: 8px 18px;
-    margin-top: 8px;
-    display: inline-block;
-  }
+/* ============================================================
+   SMALL MOBILE (Sotto i 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+    .article-title {
+        font-size: 22px;
+    }
+    
+    .article-text {
+        -webkit-line-clamp: 3; /* Mostra meno righe di anteprima su schermi minuscoli */
+          line-clamp: 3;
+    }
 }
 
-@media (max-width: 480px) {
-  .chiusa .titolo {
-    max-width: 95vw;
-  }
-  .chiusa .basso a {
-    font-size: 18px;
-  }
-  .join-us-link {
-    font-size: 13px;
-    padding: 7px 12px;
-  }
+
+@media (max-width: 768px) {
+/* Individuiamo l'immagine dentro immagine_iniziale */
+immagine_iniziale > img:first-of-type {
+/* Sostituisci 'FOTO_MOBILE.png' con il nome del nuovo file */
+content: url('../Francesca_1°shoot/J1A8408.jpg');
+/* Centriamo l'immagine a destra come richiesto */
+object-position: left center;
+object-fit: cover;
+width: 100%;
+height: 100vh;
+
+}
 }

@@ -81,9 +81,9 @@ padding :1;
 .cb-text-row_2 {
   display: grid;
   grid-template-columns: 1.3fr 3.6fr 3.6fr 0.8fr;
-  grid-template-rows: 0.4fr 1fr 0.4fr 2fr;
+  grid-template-rows: 0.2fr 1fr 0.2fr 2fr;
   gap: 0px;
-  padding: 0px 60px 0px;
+  padding: 40px 60px 0px;
   align-items: flex-start;
   background-color: white;
 }

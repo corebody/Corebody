@@ -120,3 +120,18 @@ document.addEventListener("DOMContentLoaded", function() {
         closeBtn.addEventListener('click', closeMenu);
     }
 });
+
+function toggleSearch() {
+    const input = document.getElementById("searchInput");
+    if (!input) return;
+
+    if (input.style.display === "none" || input.style.display === "") {
+        input.style.display = "block";
+        input.focus();
+    } else {
+        input.style.display = "none";
+        input.value = "";
+        const results = document.getElementById("searchResults");
+        if (results) results.innerHTML = "";
+    }
+}

@@ -304,8 +304,8 @@ height: 100vh;
         margin: 0 20px;
     }
     .cb-logo {
-        margin-left: 0;
-        max-width: 250px;
+        margin-left: 1;
+        max-width: 40%;
         margin-top:40px;
     }
     nav ul sinistra img{

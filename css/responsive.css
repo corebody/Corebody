@@ -283,6 +283,9 @@ height: 100vh;
     nav ul {
         padding: 10px 20px;
     }
+    nav sinistra img {
+        display: none;
+    }
 
     /* 2. LAYOUT CONTENUTI (GRIGLIA) */
     /* Trasformiamo le griglie complesse in una colonna singola pulita */
@@ -335,14 +338,14 @@ height: 100vh;
         margin: 0 20px;
     }
     .cb-logo {
-        margin-left: 28px;
-        max-width: 270px;
+        margin-left: 0;
+        max-width: 250px;
         margin-top:40px;
     }
     nav ul img{
         margin: 2px;
-width: 23px ;
-height: 23px ;
+width: 23px !important ;
+height: 23px  !important;
     }
 /* 1. Forza il contenitore ad occupare tutto lo spazio */
 .cb-column.cb-right {

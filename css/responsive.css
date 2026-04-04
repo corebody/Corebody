@@ -172,7 +172,7 @@ height: 100vh;
 
     /* 2. Logo sempre in alto */
     .scritta_centro {
-        margin-top: -236px;
+        margin-top: -200px;
         order: 1; /* Primo elemento */
     }
 
@@ -300,7 +300,7 @@ height: 100vh;
     }
     .cb-logo {
         margin-left: 1;
-        max-width: 40%;
+        max-width: 50%;
         margin-top:40px;
     }
     nav ul sinistra img{
@@ -340,6 +340,12 @@ height: 23px  !important;
     object-fit: cover;
     object-position: center;
      background-image: url("../immagini/Screenshot\ 2026-03-20\ alle\ 16.46.38.png");
+}
+nav ul destra img{
+    margin: 2px;
+    width: 20px !important ;
+    height: 20px  !important;
+
 }
 
 }

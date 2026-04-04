@@ -8,11 +8,6 @@
     immagine_iniziale .titolo {
         max-width: 90vw; /* Il logo occupa più spazio su schermi piccoli */
     }
-
-    nav ul {
-        padding: 10px;
-    }
-
     nav sinistra {
         margin-right: 0px; /* Riduce i margini laterali */
     }
@@ -313,7 +308,7 @@ height: 100vh;
         max-width: 250px;
         margin-top:40px;
     }
-    nav ul img{
+    nav ul sinistra img{
         margin: 2px;
 width: 23px !important ;
 height: 23px  !important;

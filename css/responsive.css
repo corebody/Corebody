@@ -3,9 +3,6 @@
    MOBILE
    ============================================================ */
 @media (max-width: 845px) {
-    * {
-    outline: 1px solid red !important;
-}
     /* 1. Header e Navigazione */
     immagine_iniziale .titolo {
         max-width: 90vw; /* Il logo occupa più spazio su schermi piccoli */

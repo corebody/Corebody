@@ -1,0 +1,558 @@
+@font-face {
+    font-family: 'titolo';
+    src: url('../font/AvenirNext-UltraLight.ttf ')format('opentype');
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    font-size: 50pt;
+    color: #00ff84;
+}
+/* Contenitore principale: ora l'altezza è libera */
+.prima_pagina {
+    display: flex;
+    width: 100%;
+    height: auto; /* L'altezza non è più bloccata, la decide la foto */
+    background-color: #ffffff;
+    overflow: hidden;
+    align-items: stretch; /* FONDAMENTALE: fa sì che .left sia alto quanto la foto a destra */
+}
+
+/* LATO TESTO (1a Pagina) */
+.left {
+    flex: 0 0 50%; /* Occupa metà larghezza */
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+    box-sizing: border-box;
+    background: #ffffff;
+    /* Non mettiamo altezza qui, la eredita grazie a 'stretch' */
+}
+
+/* Titolo centrato nello spazio verticale che crea la foto */
+.title-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* LATO FOTO (Tutte le sezioni foto) */
+.right, .left_full, .right_framed {
+    flex: 0 0 50%; /* Occupa l'altra metà */
+    display: flex;
+    align-items: flex-start; /* Allinea la foto all'inizio */
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+/* LA FOTO COMANDA L'ALTEZZA */
+.right img, .left_full img, .right_framed img {
+    width: 100%;    /* Prende tutta la larghezza del suo 50% */
+    height: auto;   /* L'altezza cresce proporzionalmente */
+    display: block;
+}
+
+/* Seconda pagina destra: cornice mantenuta tramite padding */
+.right_framed {
+    padding: 60px; 
+    box-sizing: border-box;
+}
+
+.right_framed img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+.credits p {
+    font-family: 'Avenir', sans-serif;
+    font-size: 13px;
+    line-height: 1.2;
+    margin: 4px 0;
+}
+.caption {
+    position: absolute;
+    bottom: 60px;      /* Distanza dal bordo inferiore della foto */
+    left: 40px;        /* Distanza dal bordo sinistro della foto */
+    z-index: 10;       /* Assicura che stia sopra l'immagine */
+    
+    /* Tipografia */
+    font-family: 'Avenir', sans-serif;
+    font-size: 12px;   /* Dimensione bilanciata per l'effetto editorial */
+    line-height: 1.2;  /* Interlinea stretta come nei credits */
+    font-weight: 100;  /* Molto sottile */
+    letter-spacing: 0.02em;
+    text-transform: none;
+    
+    /* Colore: Nero perché ora lo sfondo è bianco e le foto sono "intere" */
+    color: white; 
+}
+.caption-su{
+    position: absolute;
+    top: 60px;      /* Distanza dal bordo inferiore della foto */
+    left: 40px;        /* Distanza dal bordo sinistro della foto */
+    z-index: 10;       /* Assicura che stia sopra l'immagine */
+    
+    /* Tipografia */
+    font-family: 'Avenir', sans-serif;
+    font-size: 12px;   /* Dimensione bilanciata per l'effetto editorial */
+    line-height: 1.2;  /* Interlinea stretta come nei credits */
+    font-weight: 100;  /* Molto sottile */
+    letter-spacing: 0.02em;
+    text-transform: none;
+    
+    /* Colore: Nero perché ora lo sfondo è bianco e le foto sono "intere" */
+    color: white; 
+}
+.caption_basso_destra {
+    position: absolute;
+    bottom: 60px;      /* Distanza dal bordo inferiore della foto */
+    right: 40px;        /* Distanza dal bordo sinistro della foto */
+    z-index: 10;       /* Assicura che stia sopra l'immagine */
+    
+    /* Tipografia */
+    font-family: 'Avenir', sans-serif;
+    font-size: 12px;   /* Dimensione bilanciata per l'effetto editorial */
+    line-height: 1.2;  /* Interlinea stretta come nei credits */
+    font-weight: 100;  /* Molto sottile */
+    letter-spacing: 0.02em;
+    text-transform: none;
+    text-align: right;
+    
+    /* Colore: Nero perché ora lo sfondo è bianco e le foto sono "intere" */
+    color: white; 
+}
+.caption_basso_sinistra {
+    position: absolute;
+    bottom: 60px;      /* Distanza dal bordo inferiore della foto */
+    right: 40px;        /* Distanza dal bordo sinistro della foto */
+    z-index: 10;       /* Assicura che stia sopra l'immagine */
+    
+    /* Tipografia */
+    font-family: 'Avenir', sans-serif;
+    font-size: 12px;   /* Dimensione bilanciata per l'effetto editorial */
+    line-height: 1.2;  /* Interlinea stretta come nei credits */
+    font-weight: 100;  /* Molto sottile */
+    letter-spacing: 0.02em;
+    text-transform: none;
+    text-align: end;
+    /* Colore: Nero perché ora lo sfondo è bianco e le foto sono "intere" */
+    color: white; 
+}
+.caption_alto_destra {
+    position: absolute;
+    top: 60px;      /* Distanza dal bordo inferiore della foto */
+    right: 40px;        /* Distanza dal bordo sinistro della foto */
+    z-index: 10;       /* Assicura che stia sopra l'immagine */
+    
+    /* Tipografia */
+    font-family: 'Avenir', sans-serif;
+    font-size: 12px;   /* Dimensione bilanciata per l'effetto editorial */
+    line-height: 1.2;  /* Interlinea stretta come nei credits */
+    font-weight: 100;  /* Molto sottile */
+    letter-spacing: 0.02em;
+    text-transform: none;
+    text-align: end;
+    /* Colore: Nero perché ora lo sfondo è bianco e le foto sono "intere" */
+    color: white; 
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .prima_pagina, .seconda_pagina {
+        flex-direction: column;
+        height: auto;
+    }
+    .left, .right, .left_full, .right_framed {
+        flex: 0 0 100%;
+        width: 100%;
+        height: auto;
+        padding: 40px;
+    }
+    .right img, .left_full img {
+        height: 80vh; /* Forza un'altezza su mobile per non farle sparire */
+    }
+}
+
+
+.credits {
+    margin-top: auto; /* Spinge i credits sempre in fondo al padding */
+    padding-top: 20px;
+}
+
+/* --- SEZIONE TESTO CENTRALE --- */
+.testo {
+    padding: 100px 15%; /* Molto spazio ai lati per centrare il paragrafo */
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    align-items: column;
+}
+
+.testo p {
+    font-family: 'Avenir', sans-serif;
+    font-size: 18px; /* Leggermente più grande per leggibilità */
+    line-height: 1.8;
+    color: #000;
+    max-width: 800px; /* Impedisce al testo di diventare troppo largo e illeggibile */
+    margin: 0;
+    background-color: #ffffff;
+}
+
+/* --- FIX CAPTION --- */
+/* Assicurati che il contenitore della foto sia relative per ancorare la caption */
+.right, .left_full {
+    position: relative; 
+}
+
+.seconda_pagina {
+    display: flex;
+    width: 100%;
+    height: auto;          /* L'altezza deve essere libera */
+    align-items: stretch;  /* Mantiene le due colonne uguali */
+    background-color: #fff;
+}
+
+.right_framed {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column; /* Cambiato da 'block' a 'flex' */
+    justify-content: center;
+    align-items: center;
+    padding: 60px;          /* Mantieni la tua parte verde voluta */
+    box-sizing: border-box;
+    background-color: #ffffff;
+    height: auto;           /* Rimuove l'altezza forzata che crea il blu */
+}
+
+.right_framed .frame {
+    width: 100%;
+    height: auto;           /* Importante: deve seguire la foto */
+    display: flex;
+}
+
+.right_framed .frame img {
+    width: 100%;
+    height: auto;           /* La foto decide l'altezza */
+    display: block;
+    object-fit: contain;
+}
+
+
+/* Formattazione specifica per l'autrice/fonte */
+.cit br + br, 
+.cit br:last-of-type {
+    display: block;
+    content: "";
+    margin-top: 10px;
+}
+
+
+/* --- CONTENITORE TESTO EDITORIALE --- */
+.testo {
+    display: flex;
+    flex-direction: column;   /* Dispone paragrafo e citazione uno sotto l'altro */
+    align-items: center;      /* Centra i blocchi orizzontalmente */
+    padding: 120px 10%;       /* Ampio respiro verticale e laterale */
+    background-color: #ffffff;
+}
+
+/* Il paragrafo principale */
+.testo p {
+    font-family: 'Avenir', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #000;
+    max-width: 800px;         /* Impedisce che le righe diventino troppo lunghe */
+    text-align: justify;      /* Tipico dei testi accademici/artistici */
+    margin: 0 0 80px 0;       /* Margine di 80px solo sotto, per staccare la citazione */
+}
+
+/* --- LA CITAZIONE (Sotto al paragrafo) --- */
+.cit {
+    font-family: 'Avenir', sans-serif;
+    font-size: 13px;          /* Più piccola per gerarchia visiva */
+    line-height: 1.5;
+    color: #000;
+    font-weight: 300;
+    text-align:start;         /* Mantiene l'allineamento a sinistra dei tuoi <br> */
+    width: 40%;
+    align-self: center;       /* Si assicura che il blocco sia centrato nella pagina */
+    font-style: italic;  
+    text-align: justify;       
+}
+
+/* Opzionale: un tocco di classe per la firma di Patrizia Calefato */
+.cit br:nth-last-of-type(2) {
+    display: block;
+    content: "";
+    margin-top: 15px;         /* Aggiunge un po' di spazio prima della firma */
+}
+
+.terza_pagina {
+    width: 100%;
+    height: auto;           /* L'altezza è dettata dalla foto orizzontale */
+    position: relative;     /* Necessario per posizionare la caption */
+    background-color: #fff; /* Sfondo bianco */
+    line-height: 0;         /* Rimuove spazi vuoti sotto l'immagine */
+}
+.terza_pagina img {
+    width: 100%;            /* La foto occupa tutta la larghezza */
+    height: auto;           /* Mantiene le proporzioni originali */
+    display: block;
+}
+
+.left_griglia {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Due colonne uguali */
+    grid-template-rows: 1fr 1fr;    /* Due righe uguali */                 /* Spazio tra le celle */
+    padding: 60px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+/* Prima immagine: allineata a sinistra, larghezza contenuta */
+.left_griglia img:first-of-type {
+    width: 100%;            /* Non occupa tutto il 50% per lasciare respiro */
+    align-self: flex-start;
+    height: auto;
+    display: block;
+}
+
+/* Seconda immagine: allineata a destra e spostata in basso */
+.left_griglia img:last-of-type {
+    width: 100%;
+    align-self: flex-end;  /* La sposta a destra rispetto alla prima */
+    height: auto;
+    display: block;    /* Spazio dopo la didascalia */
+}
+
+/* Caption: posizionata tra le due foto, allineata a destra della prima foto */
+.left_griglia .caption {
+    font-family: 'Avenir', sans-serif;
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 100;
+    letter-spacing: 0.02em;
+    color: #000;
+    
+    text-align: left;
+    align-self: flex-end;  /* Allinea il blocco di testo a destra */
+    width: 85%;            /* Coerente con la larghezza delle foto */
+    margin-bottom: 20px;   /* Distanza dalla foto successiva */
+    
+    position: static;      /* Qui non serve absolute, segue il flusso flex */
+      
+   margin-left: 40px; 
+}
+
+
+/* Responsive per schermi piccoli */
+@media (max-width: 900px) {
+    .left_griglia {
+        padding: 40px 20px;
+    }
+    .left_griglia img:first-of-type,
+    .left_griglia img:last-of-type,
+    .left_griglia .caption {
+        width: 100%;       /* Su mobile meglio occupare tutto lo spazio */
+    }
+}
+
+/* ══════════════════════════════════════════════════════════
+   PARTE DESTRA - GRIGLIA SFALSATA (Sotto la foto a sinistra)
+   ══════════════════════════════════════════════════════════ */
+
+.right_griglia_due {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    /* Usiamo lo stesso padding della colonna sinistra per simmetria */
+    padding: 60px; 
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+/* Div vuoto superiore: occupa il 50% dell'altezza per spingere giù la foto */
+.hh {
+    flex: 1; 
+    min-height: 400px; /* Valore indicativo per bilanciare la foto a sinistra */
+}
+
+/* Contenitore della foto e didascalia */
+.colonna_due {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.right_griglia_due img {
+    width: 100%;            /* Occupa tutta la larghezza disponibile del suo 50% */
+    height: auto;
+    display: block;
+    margin-top: 60px;
+}
+
+.caption_dark {
+    font-family: 'Avenir', sans-serif;
+    font-size: 11px;        /* Leggermente più piccola come da stile editorial */
+    line-height: 1.3;
+    font-weight: 100;
+    letter-spacing: 0.02em;
+    color: #000;
+    
+    text-align: left;
+    margin-top: 20px;       /* Spazio tra foto e testo */
+    width: 100%;            /* Allineata alla larghezza della foto sopra */
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .right_griglia_due {
+        padding: 20px;
+    }
+    .hh {
+        display: none;      /* Su mobile eliminiamo il vuoto per non allungare troppo */
+    }
+}
+/* ══════════════════════════════════════════════════════════
+   LAYOUT DOPPIA FOTO VERTICALE (Destra/Sinistra Pagina)
+   ══════════════════════════════════════════════════════════ */
+/* Il contenitore che racchiude sinistra e destra deve avere display: flex; align-items: stretch; */
+
+.left_griglia_due {
+    flex: 0 0 50%;
+    display: grid;
+    /* Creiamo due righe: la prima si adatta al contenuto, la seconda anche */
+    grid-template-rows: auto auto; 
+    /* Centra la griglia intera verticalmente nella pagina */
+    align-content: center; 
+    /* Centra le foto orizzontalmente */
+    justify-items: center; 
+    padding: 41px 40px 0 40px; /* Spazio intorno alla griglia */
+    box-sizing: border-box;
+}
+
+.left_griglia_due .colonna_due {
+    width: 100%; /* Controlla quanto sono grandi le foto */
+    display: contents; /* Permette alle immagini di obbedire direttamente alla Grid del genitore */
+}
+
+.left_griglia_due img {
+    width: 100%;
+    height: auto;
+    display: block;
+/* Spazio tra la foto e la caption */
+}
+
+.left_griglia_due img:first-of-type {
+    margin-bottom: 70px; /* Spazio tra la prima foto e la caption */
+}
+
+
+/* Centratura perfetta della didascalia */
+.caption_t {
+    font-family: 'Avenir', sans-serif;
+    font-size: 10px;
+    font-weight: 100;
+    color: #000;
+    margin-top: 30px;
+    
+    /* Centra il testo verticalmente nel suo spazio (1fr) */
+    display: flex;
+    align-items: center; 
+    
+    text-align: left;
+    width: 100%; /* Allineata alla larghezza delle immagini */
+}
+
+/* --- LATO DESTRO (FOTO INCORNICIATA) --- */
+.right_framed_1 {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 27vh 4% 3vh 15%;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+.right_framed_1 .frame_1 {
+    width: 100%; /* Occupa lo spazio lasciato dal padding */
+    display: flex;
+    flex-direction: column;
+}
+
+.right_framed_1 .frame_1 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Caption sotto la foto su sfondo bianco (Nera) */
+.caption_basso_destra_nera {
+    /* RIMOSSO position: absolute o fixed */
+    margin-top: 15px; 
+    font-family: 'Avenir', sans-serif;
+    font-size: 11px;
+    line-height: 1.3;
+    font-weight: 100;
+    color: black; /* Deve essere nera perché lo sfondo è bianco */
+    text-align: right; /* Allineata all'inizio della foto */
+    align-items:end;
+        width: 100%; /* Allineata alla larghezza della foto */
+        right: 10%; /* Allineata al bordo destro della foto */
+
+}
+
+
+
+.sesta_pagina {
+    display: flex;
+    width: 100%;
+    height: auto;          /* L'altezza è dettata dalla foto orizzontale */
+    align-items: stretch;  /* Mantiene le due colonne uguali */
+    background-color: #fff; /* Sfondo bianco */
+}
+
+.caption_finale {
+ margin-top: 15px; 
+    font-family: 'Avenir', sans-serif;
+    font-size: 11px;
+    line-height: 1.3;
+    font-weight: 100;
+    color: black; /* Deve essere nera perché lo sfondo è bianco */
+    text-align: left; /* Allineata all'inizio della foto */
+    align-items:end;
+        width: 100%; /* Allineata alla larghezza della foto */
+        right: 10%; /* Allineata al bordo destro della foto */
+
+}
+/* Responsive */
+@media (max-width: 845px) {
+    .image-container-final, .caption_finale {
+        width: 90%;
+    }
+}
+/* --- LATO DESTRO (FOTO INCORNICIATA) --- */
+.right_framed_2 {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+   padding: 3% 3% 3% 3%;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+.right_framed_2 .frame_2 {
+    width: 100%; /* Occupa lo spazio lasciato dal padding */
+    display: flex;
+    flex-direction: column;
+}
+
+.right_framed_2 .frame_2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}

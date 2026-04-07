@@ -71,10 +71,10 @@ padding :1;
 
 .cb-text-row {
   display: grid;
-  grid-template-columns: 1fr 3.15fr 3.15fr 1.5fr;
+  grid-template-columns: 1.2fr 3fr 3fr 2fr;
   grid-template-rows: 0.4fr 1fr 0.4fr 2.5fr;
   gap: 0px;
-  padding: 40px 60px 60px;
+  padding:30px 50px 50px;
   align-items: flex-start;
   background-color: white;
 }
@@ -83,14 +83,14 @@ padding :1;
   grid-template-columns: 1.3fr 3.6fr 3.6fr 0.8fr;
   grid-template-rows: 0.2fr 1fr 0.2fr 2fr;
   gap: 0px;
-  padding: 40px 60px 0px;
+  padding: 30px 50px 10px;
   align-items: flex-start;
   background-color: white;
 }
 /* Titoli laterali */
 .cb-section-title {
 font-family: 'avenir', serif;
-  font-size: 40px;
+  font-size: 37px;
   letter-spacing: 0.08em;
   margin: 0 0 24px;
   font-weight: normal;
@@ -99,21 +99,18 @@ font-family: 'avenir', serif;
 /* Testo */
 .cb-paragraph {
   font-family: 'avenir', serif;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.5;
   text-align: justify;
     text-align-last: left;
+    margin-bottom: 0;
+  margin-top: 0;
 }
 
 .sidebar {
 background-color: #fefefef7;
 }
 
-
-.cb-paragraph {
-  margin-bottom: 0;
-  margin-top: 0;
-}
 
 
 /* animazione fade-in con delay per ogni colonna

@@ -53,9 +53,9 @@ nav ul li {
 }
 
 nav ul img {
-    margin: 10px;
-    width: 28px;
-    height: 28px;
+    margin: 7px;
+    width: 22px ;
+    height: 22px ;
     object-fit: cover;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }

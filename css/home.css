@@ -344,7 +344,7 @@ immagine_iniziale .titolo {
 .sidebar a {
     padding: 20px 50px;
     text-decoration: none;
-    font-size: 50px;
+    font-size: 40px;
     color: #000;
     display: block;
     transition: 0.3s;
@@ -383,7 +383,7 @@ immagine_iniziale .titolo {
 
 .basso a {
     padding: 10px 0;
-    font-size: 40px;
+    font-size: 36px;
     white-space: nowrap;
 }
 
@@ -403,7 +403,7 @@ immagine_iniziale .titolo {
 
 
 .search-results {
-    padding:  15px;
+    padding:  0 15px 0;
     max-width: 100%;
     overflow: hidden;
 }
@@ -412,7 +412,7 @@ immagine_iniziale .titolo {
     display: block;
      font-family: 'avenir', sans-serif;
     padding: 8px 0;
-    font-size: 42px;
+    font-size: 27px;
     color: #333;
     text-decoration: none;
     white-space: normal;
@@ -589,7 +589,7 @@ immagine_iniziale .titolo {
     display: flex;
     justify-content:space-between;
     gap: 106px;
-    margin-top: -50px;
+    margin-top: -75px;
     position: relative;
     z-index: 10;
 }
@@ -597,7 +597,7 @@ immagine_iniziale .titolo {
 .scritta_centro .basso a {
     text-decoration: none;
     color: inherit;
-    font-size: 30px;
+    font-size: 26px;
     font-weight: lighter;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
@@ -747,7 +747,7 @@ nav#sotto destra p,
 nav#sotto centro p {
   margin-left: 35px;
   margin-bottom:8px;
-  font-size: 18px;
+  font-size: 14px;
   color: #222;
 }
 
@@ -768,7 +768,7 @@ margin-bottom: 3px;
 }
 
 .join-us-link{
-    font-size: 18px;
+    font-size: 14px;
     color: #222;
     text-decoration: none;
     margin-left: 35px;
@@ -778,23 +778,27 @@ margin-bottom: 3px;
 
 
 
-nav#sotto sinistra img {
-  width: 32px;
-  height: 32px;
-}
-
 
 /* Centra i link del footer perfettamente */
 .basso {
   display: flex;
   justify-content: space-around; /* o center se preferisci stretti */
-  gap: 40px; /* spazio uguale tra tutti */
+  gap: 10 px; /* spazio uguale tra tutti */
+  width: 100%;
+  max-width: 400px; /* larghezza massima centrata */
+}
+
+.scritta_centro .basso {
+  display: flex;
+  justify-content: space-around; /* o center se preferisci stretti */
+  gap: 10 px; /* spazio uguale tra tutti */
   width: 100%;
   max-width: 600px; /* larghezza massima centrata */
 }
+ 
 
 .basso a {
-  font-size: 30px; /* o il tuo */
+  font-size: 17px; /* o il tuo */
   text-decoration: none;
   color: inherit;
   white-space: nowrap; /* impedisce il wrap */
@@ -818,8 +822,8 @@ nav#sotto sinistra img {
 #sotto div:nth-child(3) { text-align: left; } /* sinistra */
 
 #sotto img {
-  width: 32px;
-  height: 32px;
+  width: 22px;
+  height: 22px;
 }
 
 .about-line::after {
@@ -886,6 +890,6 @@ nav#sotto centro p {
     margin-top: 61px;
   margin-left: 35px;
   margin-bottom:8px;
-  font-size: 12px;
+  font-size: 11px;
   color: #222;
 }

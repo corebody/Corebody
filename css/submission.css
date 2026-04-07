@@ -13,12 +13,14 @@ body, html {
     position: relative;
     width: 100%;
     height: 78vh; /* Copre l'intera altezza dello schermo */
-    background-image: url('../immagini/J1A0625.jpg'); /* Inserisci il tuo percorso immagine */
+    background-image: url(../Francesca_2°shoot/J1A0625\ copia.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     align-items: flex-end; /* Allinea il contenuto in basso */
+
+  
 }
 .submission-container_contact {
     position: relative;

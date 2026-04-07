@@ -51,7 +51,7 @@
     }
 
     .sidebar a {
-        font-size: 20px;
+        font-size: 27px;
         padding: 0px x0px;
     }
 
@@ -398,5 +398,38 @@ margin-left: 2px;
 
 .centro{
     align-items: center;
+}
+.intro {
+margin-top: 13px;
+color: white;
+font-weight: 300;
+font-size: 1rem;
+margin-bottom: 30px;
+font-family: 'avenir', sans-serif;
+}
+.contact-group h3 {
+    font-size: 1rem;
+}
+.submission-container_contact {
+position: relative;
+width: 100%;
+height: 78vh;
+background-image: url('../Francesca_1°shoot/J1A7797.jpg');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+display: flex;
+align-items: flex-end;
+}
+.submission-container {
+    background-image: url('../Francesca_2°shoot/J1A0057.jpg');
+}
+.container {
+display: flex;
+min-height: 78vh;
+align-items: end;
+margin-right: 30px;
+text-align: end;
+
 }
 }

@@ -5,7 +5,7 @@
 h1{
     font-family: Arial, sans-serif;
     font-weight:bold;
-    font-size: 50pt;
+    font-size: 56pt;
     color: #00ff84;
 }
 /* Contenitore principale: ora l'altezza è libera */
@@ -182,25 +182,6 @@ h1{
     padding-top: 20px;
 }
 
-/* --- SEZIONE TESTO CENTRALE --- */
-.testo {
-    padding: 100px 15%; /* Molto spazio ai lati per centrare il paragrafo */
-    text-align: justify;
-    display: flex;
-    justify-content: center;
-    align-items: column;
-}
-
-.testo p {
-    font-family: 'Avenir', sans-serif;
-    font-size: 18px; /* Leggermente più grande per leggibilità */
-    line-height: 1.8;
-    color: #000;
-    max-width: 800px; /* Impedisce al testo di diventare troppo largo e illeggibile */
-    margin: 0;
-    background-color: #ffffff;
-}
-
 /* --- FIX CAPTION --- */
 /* Assicurati che il contenitore della foto sia relative per ancorare la caption */
 .right, .left_full {
@@ -267,7 +248,7 @@ h1{
     color: #000;
     max-width: 800px;         /* Impedisce che le righe diventino troppo lunghe */
     text-align: justify;      /* Tipico dei testi accademici/artistici */
-    margin: 0 0 80px 0;       /* Margine di 80px solo sotto, per staccare la citazione */
+    margin: 0 0 -80px 0;       /* Margine di 80px solo sotto, per staccare la citazione */
 }
 
 /* --- LA CITAZIONE (Sotto al paragrafo) --- */

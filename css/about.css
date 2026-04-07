@@ -72,7 +72,7 @@ padding :1;
 .cb-text-row {
   display: grid;
   grid-template-columns: 1.2fr 3fr 3fr 2fr;
-  grid-template-rows: 0.4fr 1fr 0.4fr 2.5fr;
+  grid-template-rows: 0.4fr 1fr 0.4fr 2fr;
   gap: 0px;
   padding:30px 50px 50px;
   align-items: flex-start;
@@ -193,7 +193,7 @@ ul.cb-paragraph li:nth-child(7) { animation-delay: 1.4s; }
   width: 100%;
   height: 100%;
   /* Inserisci qui l'URL dell'immagine */
-  background-image: url("../Francesca_1°shoot/J1A7426.jpeg");
+  background-image: url("../Francesca_3_shoot/DSF4431-Edit.jpg");
   background-attachment: fixed; /* L'effetto "DME Magazine" */
   background-position: center;
   background-repeat: no-repeat;

@@ -34,9 +34,6 @@
         font-size: 14px;
 
     }
-    .article-date {
-        font-size: 12px;
-    }
     .article-content {
         padding: 20px; /* Aumenta lo spazio per il tocco */
     }
@@ -447,7 +444,7 @@ z-index: 10;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../Francesca_1°shoot/J1A7426.jpeg");
+  background-image: url("../Francesca_3_shoot/DSF4374-Edit.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: scroll; /* Mai usare fixed qui su mobile */

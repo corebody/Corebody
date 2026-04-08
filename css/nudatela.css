@@ -157,23 +157,6 @@ h1{
     color: white; 
 }
 
-/* --- RESPONSIVE --- */
-@media (max-width: 900px) {
-    .prima_pagina, .seconda_pagina {
-        flex-direction: column;
-        height: auto;
-    }
-    .left, .right, .left_full, .right_framed {
-        flex: 0 0 100%;
-        width: 100%;
-        height: auto;
-        padding: 40px;
-    }
-    .right img, .left_full img {
-        height: 80vh; /* Forza un'altezza su mobile per non farle sparire */
-    }
-}
-
 
 .credits {
     margin-top: auto; /* Spinge i credits sempre in fondo al padding */
@@ -406,15 +389,6 @@ h1{
     width: 100%;            /* Allineata alla larghezza della foto sopra */
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-    .right_griglia_due {
-        padding: 20px;
-    }
-    .hh {
-        display: none;      /* Su mobile eliminiamo il vuoto per non allungare troppo */
-    }
-}
 /* ══════════════════════════════════════════════════════════
    LAYOUT DOPPIA FOTO VERTICALE (Destra/Sinistra Pagina)
    ══════════════════════════════════════════════════════════ */
@@ -527,18 +501,12 @@ h1{
         right: 10%; /* Allineata al bordo destro della foto */
 
 }
-/* Responsive */
-@media (max-width: 845px) {
-    .image-container-final, .caption_finale {
-        width: 90%;
-    }
-}
 /* --- LATO DESTRO (FOTO INCORNICIATA) --- */
 .right_framed_2 {
     flex: 0 0 50%;
     display: flex;
     flex-direction: column;
-   padding: 3% 3% 3% 3%;
+   padding: 2% 3% 2% 3%;
     box-sizing: border-box;
     background-color: #ffffff;
 }

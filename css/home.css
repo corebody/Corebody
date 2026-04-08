@@ -895,10 +895,21 @@ nav#sotto centro p {
   font-size: 11px;
   color: #222;
 }
+html {
+  /* Rende lo scorrimento verso l'ancora #top fluido anziché a scatto */
+  scroll-behavior: smooth; 
+}
+
 #backToTop {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 50px;
-  z-index: 9999; /* fondamentale: sopra a tutto */
+  display: none; /* Nasconde la freccia all'apertura della pagina */
+  position: fixed; /* La fissa sullo schermo */
+  bottom: 20px; /* Distanza dal basso */
+  right: 20px; /* Distanza da destra */
+  z-index: 999; /* Assicura che stia sopra agli altri elementi */
+}
+
+/* Opzionale: fissa una larghezza per l'immagine se è troppo grande */
+#backToTop img {
+  width: 50px; 
+  height: auto;
 }

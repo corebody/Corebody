@@ -1,8 +1,29 @@
 
+html {
+  /* Rende lo scorrimento verso l'ancora #top fluido anziché a scatto */
+  scroll-behavior: smooth; 
+}
+
+#backToTop {
+  display: none; /* Nasconde la freccia all'apertura della pagina */
+  position: fixed; /* La fissa sullo schermo */
+  bottom: 20px; /* Distanza dal basso */
+  right: 20px; /* Distanza da destra */
+  z-index: 999; /* Assicura che stia sopra agli altri elementi */
+    width: 50px; 
+}
+
+/* Opzionale: fissa una larghezza per l'immagine se è troppo grande */
+#backToTop img {
+  width: 50px; 
+  height: auto;
+}
+
 /* ============================================================
    MOBILE
    ============================================================ */
-@media (max-width: 845px) {
+
+   @media (max-width: 845px) {
     /* 1. Header e Navigazione */
     immagine_iniziale .titolo {
         max-width: 90vw; /* Il logo occupa più spazio su schermi piccoli */
@@ -458,7 +479,6 @@ z-index: 10;
 /* IMPORTANTE: Assicurati che TUTTI i blocchi di testo abbiano questo */
 .cb-text-row, .cb-text-row_2, .latest-section, .chiusa {
   position: relative;
-  z-index: 10; /* Devono essere più alti della foto */
 }
 /* Assicurati che il contenitore principale non blocchi la posizione degli elementi interni */
 .cb-main {

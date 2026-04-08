@@ -135,3 +135,23 @@ function toggleSearch() {
         if (results) results.innerHTML = "";
     }
 }
+
+
+  // Seleziona il bottone tramite il suo ID
+  const backToTopBtn = document.getElementById("backToTop");
+
+  // Ascolta l'evento di scorrimento della pagina
+  window.addEventListener("scroll", function() {
+    
+    // window.innerHeight corrisponde all'altezza esatta della "prima schermata" (il viewport)
+    const altezzaSchermata = window.innerHeight;
+
+    // window.scrollY indica di quanti pixel l'utente ha scrollato verso il basso
+    if (window.scrollY > altezzaSchermata/2) {
+      // Se lo scroll supera la prima schermata, mostra il bottone
+      backToTopBtn.style.display = "block";
+    } else {
+      // Altrimenti, nascondilo
+      backToTopBtn.style.display = "none";
+    }
+  });

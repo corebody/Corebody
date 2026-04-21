@@ -634,18 +634,6 @@ immagine_iniziale .titolo {
 }
 
 
-
-@media (max-width: 1465px) {
-    .sidebar {
-        /* Rimuovi min-width! */
-        max-width: 100vw; 
-        
-        /* Assicurati che l'overflow sia nascosto così 
-           il contenuto non "esce" quando la larghezza cala */
-        overflow-x: hidden; 
-    }
-}
-
         
         .newsletter-close {
             position: absolute;
@@ -663,7 +651,7 @@ immagine_iniziale .titolo {
         
         .newsletter-popup h2 {
             font-family: 'secondo_font', sans-serif;
-            font-size: 48px;
+            font-size: 38px;
             margin-bottom: 0px;
             letter-spacing: 2px;
             color: #852936;
@@ -674,13 +662,13 @@ immagine_iniziale .titolo {
         .newsletter-popup form {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 10px;
         }
         
         .newsletter-popup input[type="email"] {
             padding: 27px;
             border: 1px solid #ccc;
-            font-size: 24px;
+            font-size: 19px;
             font-family: 'avenir', sans-serif;
             outline: none;
             transition: border-color 0.3s;
@@ -692,11 +680,11 @@ immagine_iniziale .titolo {
         }
         
         .newsletter-popup button {
-            padding: 17px;
+            padding: 15px;
              background: #e1aebc;
             color: #852936;
             border: none;
-            font-size: 24px;
+            font-size: 20px;
             letter-spacing: 2.5px;
             cursor: pointer;
             font-family: 'avenir', sans-serif;
@@ -713,7 +701,7 @@ immagine_iniziale .titolo {
         .newsletter-success {
             display: none;
             color: #2e7d32 !important;
-            margin-top: 15px;
+            margin-top: 10px;
             margin-bottom: 0 !important;
         }
         
@@ -837,9 +825,9 @@ margin-bottom: 3px;
 
       .newsletter-popup p {
             font-family: 'avenir', sans-serif;
-            font-size: 17px;
+            font-size: 15px;
             color:black;
-            margin-bottom: 35px;
+            margin-bottom: 28px;
             margin-block-start: 0;
         }
         

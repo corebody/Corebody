@@ -1,17 +1,129 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Corebody - Submission</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corebody - Layer_01 Magazine</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/home.css">
+    <style>
+        body{
+            background-color: white;
+        }
+        /* CSS SPECIFICO PER PAGINA PRODOTTO */
+        .product-page-container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 100px 4% 50px 4%;
+            gap: 50px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
 
-    <link rel="stylesheet" href="css/submission.css">
-    <link rel="stylesheet" href="css/about.css">
-      <link rel="stylesheet" href="css/responsive.css">
+        /* Sezione Immagine */
+        .product-gallery {
+            flex: 1 1 60%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .product-gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+            background-color: white;
+        }
+
+        /* Sezione Info (Sticky) */
+        .product-details-sticky {
+            flex: 1 1 30%;
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+            text-transform: uppercase;
+        }
+
+        .product-header {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .product-header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            letter-spacing: 2px;
+        }
+
+        .product-price {
+            font-size: 18px;
+            color: #000;
+        }
+
+        .product-description {
+            font-size: 13px;
+            line-height: 1.6;
+            text-transform: none; /* Descrizione leggibile in minuscolo */
+            letter-spacing: 0.5px;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        /* Bottone Add to Cart */
+        .add-to-cart-btn {
+            width: 100%;
+            padding: 20px;
+            background-color: #852936;
+            color: #E1AEBC;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            letter-spacing: 2px;
+            transition: opacity 0.3s;
+            font-size: 17px;
+        }
+
+        .add-to-cart-btn:hover {
+            color: #852936;
+             background-color: #E1AEBC;
+        }
+
+        /* Dettagli tecnici */
+        .specs {
+            margin-top: 40px;
+            font-size: 11px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .specs ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .specs li {
+            margin-bottom: 8px;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .product-page-container {
+                flex-direction: column;
+                padding-top: 60px;
+            }
+            .product-details-sticky {
+                position: static;
+                order: 2;
+            }
+            .product-gallery {
+                order: 1;
+            }
+        }
+    </style>
 </head>
+<body id="top">
     <body id="top">
     <!-- Popup Newsletter -->
     <div id="newsletterOverlay" class="newsletter-overlay">
@@ -77,70 +189,82 @@
     <div class="latest-track">
       <!-- STRIP 1 -->
       <div class="latest-strip">
-        <h1 class="latest-title">SUBMISSION</h1>
+        <h1 class="latest-title">SHOP</h1>
         <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
-                <h1 class="latest-title">SUBMISSION</h1>
+                <h1 class="latest-title">SHOP</h1>
         <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
-                <h1 class="latest-title">SUBMISSION</h1>
+                <h1 class="latest-title">SHOP</h1>
         <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
-                <h1 class="latest-title">SUBMISSION</h1>
+                <h1 class="latest-title">SHOP</h1>
         <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">       
-         <h1 class="latest-title">SUBMISSION</h1>
+              <h1 class="latest-title">SHOP</h1>
         <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
-                <h1 class="latest-title">SUBMISSION</h1>
-        <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">       
-         <h1 class="latest-title">SUBMISSION</h1>
+                <h1 class="latest-title">SHOP</h1>
         <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
-                <h1 class="latest-title">SUBMISSION</h1>
+                <h1 class="latest-title">SHOP</h1>
         <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
+                <h1 class="latest-title">SHOP</h1>
+        <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">      
       </div>
 
       <!-- STRIP 2: copia identica, aria-hidden per accessibilità -->
       <div class="latest-strip">
-        <h1 class="latest-title">SUBMISSION</h1>
+        <h1 class="latest-title">SHOP</h1>
         <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
-                <h1 class="latest-title">SUBMISSION</h1>
+                <h1 class="latest-title">SHOP</h1>
         <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
-                <h1 class="latest-title">SUBMISSION</h1>
+                <h1 class="latest-title">SHOP</h1>
         <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
-                <h1 class="latest-title">SUBMISSION</h1>
+                <h1 class="latest-title">SHOP</h1>
         <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">       
-         <h1 class="latest-title">SUBMISSION</h1>
+              <h1 class="latest-title">SHOP</h1>
         <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
-                <h1 class="latest-title">SUBMISSION</h1>
-        <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">       
-         <h1 class="latest-title">SUBMISSION</h1>
+                <h1 class="latest-title">SHOP</h1>
         <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
-                <h1 class="latest-title">SUBMISSION</h1>
+                <h1 class="latest-title">SHOP</h1>
         <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">
+                <h1 class="latest-title">SHOP</h1>
+        <img src="immagini/cb logo rosso.png" alt="logo" class="logo_piccolo_latest">      
       </div>
     </div>
   </div>
 
 </section>
-<main class="submission-container">
-  <div class="overlay-panel"></div>
+    <main class="product-page-container">
+        <section class="product-gallery">
+            <img src="immagini/magazine-cover.jpg" alt="Corebody Magazine Cover">
+            <img src="immagini/magazine-inside-1.jpg" alt="Corebody Magazine Inside 1">
+            <img src="immagini/magazine-inside-2.jpg" alt="Corebody Magazine Inside 2">
+        </section>
 
-        <div class="content-overlay">
-            <p>Se vuoi contribuire alla diffusione dei nostri valori e delle nostre idee, inviaci il tuo lavoro per una possibile pubblicazione.<br>
-            Corebody è uno spazio aperto alla collaborazione creativa, dove accogliamo punti di vista personali e sperimentazioni visive legate ai temi che esploriamo.</p>
-            
-            <p class="email-line">Invia il tuo progetto a: <strong>corebody.submission@gmail.com</strong></p>
-            
-            <div class="list-section">
-                <p>Includi:</p>
+        <section class="product-details-sticky">
+            <div class="product-header">
+                <p class="brand-label">Corebody Editions</p>
+                <h1>Layer_01 Magazine</h1>
+                <p class="product-price">€18.00</p>
+            </div>
+
+            <div class="product-description">
+                <p>
+                    Il primo numero cartaceo di Corebody esplora il concetto di "Layering" attraverso editoriali di moda esclusivi, interviste ad artisti emergenti e approfondimenti sulla cultura visuale contemporanea. 
+                    Un oggetto da collezione stampato su carta premium.
+                </p>
+            </div>
+
+            <button class="add-to-cart-btn">ADD TO BAG</button>
+
+            <div class="specs">
                 <ul>
-                    <li>– una breve descrizione del progetto;</li>
-                    <li>– i crediti del team;</li>
-                    <li>– i contenuti visivi.</li>
+                    <li><strong>FORMATO:</strong> 230 x 300 MM</li>
+                    <li><strong>PAGINE:</strong> 124</li>
+                    <li><strong>CARTA:</strong> ARCOSET 120GSM</li>
+                    <li><strong>LINGUA:</strong> ITALIANO / ENGLISH</li>
                 </ul>
             </div>
-        </div>
-        </div>
+        </section>
     </main>
-   
 
-            <section class="chiusa">
+                <section class="chiusa">
             <div class="sezione_finale">
             <div class="scritta_centro">
                 <a href="index.html">
@@ -178,5 +302,5 @@
     </main>
 
 <script src="funzioni.js"></script>
-</body>
+
 </html>

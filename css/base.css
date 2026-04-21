@@ -137,8 +137,8 @@ nav ul {
         .newsletter-popup {
             background: #f5f0e8e8;
             padding: 40px;
-            max-width: 715px;
-            width: 90%;
+max-width: 600px;
+width: 54%;
             text-align: center;
             position: relative;
             animation: popupSlideIn 0.4s ease;
@@ -156,13 +156,4 @@ nav ul {
             }
         }
 
-        
-        @media (max-width: 480px) {
-            .newsletter-popup {
-                padding: 30px 20px;
-            }
-            
-            .newsletter-popup h2 {
-                font-size: 20px;
-            }
-        }
+    

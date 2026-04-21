@@ -1,0 +1,83 @@
+/* Container principale ispirato alla moda di lusso */
+.shop-main {
+    padding: 80px 4% 120px 4%;
+    background-color: #fff;
+}
+
+.shop-wrapper {
+    display: grid;
+    /* Griglia a 12 colonne per massima precisione, tipica dei layout moda */
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+}
+
+.shop-product {
+    /* Il magazine occupa le 4 colonne centrali per un look editoriale */
+    grid-column: 4 / span 6; 
+    position: relative;
+}
+
+/* Effetto immagine "Fashion" */
+.image-box {
+    width: 100%;
+    overflow: hidden;
+    background-color: #f7f7f7; /* Grigio chiarissimo per il caricamento */
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.main-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    mix-blend-mode: multiply; /* Se l'immagine ha sfondo bianco, si fonde col sito */
+    transition: scale 0.8s ease;
+}
+
+.shop-product:hover .main-img {
+    scale: 1.03; /* Leggerissimo zoom di classe */
+}
+
+/* Metadati del prodotto (Layout orizzontale pulito) */
+.product-meta {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    color: #852936;
+}
+
+.brand-name {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 4px;
+     text-decoration: none;
+}
+
+.item-name {
+    font-weight: 300;
+    font-size: 13px;
+     text-decoration: none;
+}
+
+.price {
+    font-family: sans-serif;
+}
+
+/* Responsività per mobile */
+@media (max-width: 768px) {
+    .shop-product {
+        grid-column: 1 / span 12; /* Su mobile occupa tutto lo spazio */
+    }
+    
+    .shop-main {
+        padding: 40px 20px;
+    }
+}
+a { 
+    text-decoration: none; 
+
+}

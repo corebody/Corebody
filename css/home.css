@@ -901,3 +901,7 @@ html {
   width: 50px; 
   height: auto;
 }
+
+#articlesGrid article:nth-of-type(4) .article-text {
+    -webkit-line-clamp: 3;
+}

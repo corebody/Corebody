@@ -12,8 +12,8 @@
 }
 
 .shop-product {
-    /* Il magazine occupa le 4 colonne centrali per un look editoriale */
-    grid-column: 4 / span 6; 
+    /* Il magazine occupa le 1 colonna centrali per un look editoriale */
+    grid-column: 1 / span 4;
     position: relative;
 }
 

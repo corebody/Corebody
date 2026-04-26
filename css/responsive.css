@@ -43,7 +43,9 @@ html {
         margin-right: 20px;
         margin-left: 20px;
     }
-
+            .shop-wrapper {
+            grid-template-columns: repeat(21, 5fr);
+            }
     /* 3. Griglia Articoli */
     .articles-grid {
         grid-template-columns: 1fr; /* Una sola colonna per massima leggibilità */
